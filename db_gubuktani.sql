@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 31, 2018 at 07:03 PM
+-- Generation Time: Feb 06, 2018 at 07:51 PM
 -- Server version: 10.1.25-MariaDB
--- PHP Version: 7.1.7
+-- PHP Version: 5.6.31
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -69,7 +69,8 @@ CREATE TABLE `tb_feedback` (
 
 INSERT INTO `tb_feedback` (`id_feedback`, `nama`, `email`, `pesan`, `create_at`, `update_at`) VALUES
 (6, 'Wahyu Ananda', 'wahyu@gmail.com', 'Isinya Bagus Mas', '2018-01-31 23:25:10', NULL),
-(7, 'Wahyu Ananda', 'wahyu@gmail.com', 'okelah', '2018-01-31 23:31:38', NULL);
+(7, 'Wahyu Ananda', 'wahyu@gmail.com', 'okelah', '2018-01-31 23:31:38', NULL),
+(8, 'Dimas Pramudya Sumarsis', 'dimasrajawali76@gmail.com', '', '2018-02-06 22:29:35', NULL);
 
 -- --------------------------------------------------------
 
@@ -110,7 +111,7 @@ CREATE TABLE `tb_lahan` (
   `alamat_lahan` varchar(100) NOT NULL,
   `luas` varchar(7) NOT NULL,
   `sertifikasi` varchar(60) NOT NULL,
-  `deskripsi` varchar(255) NOT NULL,
+  `deskripsi` text NOT NULL,
   `harga` int(11) NOT NULL,
   `kurun_sewa` varchar(10) NOT NULL,
   `fasilitas_irigasi` varchar(60) NOT NULL,
@@ -118,21 +119,18 @@ CREATE TABLE `tb_lahan` (
   `fasilitas_jalan` varchar(60) NOT NULL,
   `fasilitas_pemandangan` varchar(60) NOT NULL,
   `foto_lahan` varchar(255) NOT NULL,
-  `create_at` varchar(100) DEFAULT NULL,
-  `update_at` varchar(100) DEFAULT NULL
+  `fieldCreate_at` varchar(100) DEFAULT NULL,
+  `fieldUpdate_at` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tb_lahan`
 --
 
-INSERT INTO `tb_lahan` (`id_lahan`, `id_user`, `id_kategori`, `judul`, `alamat_lahan`, `luas`, `sertifikasi`, `deskripsi`, `harga`, `kurun_sewa`, `fasilitas_irigasi`, `fasilitas_tanah`, `fasilitas_jalan`, `fasilitas_pemandangan`, `foto_lahan`, `create_at`, `update_at`) VALUES
-(10, 39, 12, 'Disewakan Sawah Harga Murah Di Jalan Sepanjang Sidoarjo', 'Jl, Sepanjang , Sidoarjo', '4000', 'SHM - Sertifikat Hak Milik', 'Disewakan sawah harga murah dekat jalan raya dan pasar induk.', 20000000, 'Tahunan', 'Melewati Saluran Kecil', 'Gambut', 'Pinggir Jalan Raya', 'Latar Belakang Gunung', '310120182158441518_2.jpg', '2018-01-31 21:58:44', '2018-01-31 21:59:10'),
-(11, 39, 12, 'Disewakan Sawah Harga Murah Di Taman Sidoarjo', 'Jl. Taman Sidoarjo', '3000', 'HGB - Hak Guna Bangunan', 'Disewakan lahan kdua saya di taman sidoarjo lokasi strategis . udah angkut aja', 3000000, 'Tahunan', 'Menggunakan Pompa Air', 'Gambut', 'Pinggir Jalan Raya', 'Tidak Ada', '31012018220252290049184_1_644x461_tanah-disewakan-utk-usaha-karanganyar-kab.jpg', '2018-01-31 22:02:52', NULL),
-(12, 36, 13, 'Disewakan Kebun Sawit Wilayah Kalimantan Dijamin Profit', 'Jl, Sapuan , Pangkalanbun', '120000', 'HGB - Hak Guna Bangunan', 'Kebun Sawit ini adalah kebun paling profit di kalimantan dan dapat menghasilkan banyak sekali buah kelapa sawit dalam satu kali panen', 15000000, 'Tahunan', 'Melewati Saluran Kecil', 'Gambut', 'Pinggir Jalan Raya', 'Tidak Ada', '31012018221529images (1).jpg', '2018-01-31 22:15:29', NULL),
-(13, 36, 14, 'Hutan Produksi Jati Paling Ciamik Bisa Disewakan', 'Jl. Nasional Solo Jogja , Kab Magelang', '5000', 'Lainnya (PPJB,Girik,Adat,dll)', 'Lahan ini milik desa sumbersari kecamatan bendol kab magelang , disewakan karena ingin menambah kas desa', 10000000, 'Tahunan', 'Melewati Saluran Kecil', 'Gambut', 'Pinggir Jalan Raya', 'Tidak Ada', '31012018222047tanah-disewakan-di-jakarta-timur.jpg', '2018-01-31 22:20:47', NULL),
-(14, 40, 17, 'Tanah Kosong Daerah Jati Rawa Kecamatan Bondol Kab Sukoharjo', 'Jl. Jatirawa 22 Kec Bondol Kab Sukoharjo', '2500', 'SHM - Sertifikat Hak Milik', 'Okelah', 2000000, 'Tahunan', 'Langsung Dari Parit', 'Liat', 'Pinggir Jalan Raya', 'Tidak Ada', '31012018223445C0mCsJOVEAAdoTB.jpg', '2018-01-31 22:34:45', NULL),
-(15, 40, 17, 'Disewakan Tanah Kosong Lagi Milik Saya', 'Jl. Kapasan 1 , Sambikerep , Surabaya', '3500', 'SHM - Sertifikat Hak Milik', 'Siplah', 3000000, 'Tahunan', 'Melewati Saluran Kecil', 'Gambut', 'Melewati Jalan Setapak Sawah', 'Tidak Ada', '31012018223721big765186.jpg', '2018-01-31 22:36:17', '2018-01-31 22:37:34');
+INSERT INTO `tb_lahan` (`id_lahan`, `id_user`, `id_kategori`, `judul`, `alamat_lahan`, `luas`, `sertifikasi`, `deskripsi`, `harga`, `kurun_sewa`, `fasilitas_irigasi`, `fasilitas_tanah`, `fasilitas_jalan`, `fasilitas_pemandangan`, `foto_lahan`, `fieldCreate_at`, `fieldUpdate_at`) VALUES
+(16, 41, 12, 'Disewakan Sawah Dekat Jalan Lintas Surabaya Solo', 'Jl. Peterongan, Desa Gurah, Kec Canggu Kab Nganjuk', '2000', 'SHM - Sertifikat Hak Milik', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 2000000, 'Tahunan', 'Langsung Dari Parit', 'Gambut', 'Pinggir Jalan Raya', 'Terasering', '06022018185320s3.jpg', '2018-02-06 16:14:07', '2018-02-06 22:57:40'),
+(17, 41, 12, 'Disewakan Sawah Daerah Kletek Sidoarjo', 'Jl.Sememi Jaya Utara', '2500', 'SHM - Sertifikat Hak Milik', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 5000000, 'Tahunan', 'Melewati Saluran Kecil', 'Gambut', 'Pinggir Jalan Raya', 'Tidak Ada', '06022018194925sawah5.jpg', '2018-02-06 19:49:25', '2018-02-06 22:57:14'),
+(18, 41, 13, 'Disewakan Kebun Jeruk Di Daerah Prigen Pasuruan', 'Jl . Puncak Prigen Kab Pasuruan', '3000', 'SHM - Sertifikat Hak Milik', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum.\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing \r\nelit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing \r\nelit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 20000000, 'Tahunan', 'Langsung Dari Parit', 'Gambut', 'Melewati Jalan Setapak Sawah', 'Tidak Ada', '06022018195507kebun4.jpg', '2018-02-06 19:55:07', NULL);
 
 -- --------------------------------------------------------
 
@@ -159,10 +157,8 @@ CREATE TABLE `tb_user` (
 --
 
 INSERT INTO `tb_user` (`id_user`, `nama_depan`, `nama_belakang`, `email`, `password`, `alamat`, `telepon`, `profesi`, `foto`, `create_at`, `update_at`) VALUES
-(36, 'Dimas', 'Pramudya', 'dimasrajawali76@gmail.com', '$2y$10$XjYWrdBNTHoyRR2JlIDj3esoUB2VZU.K6GcP4Y.nRTaIc9cWtA7t6', 'Jl. Manukan Rejo III 1C No 8 , Manukan Kulon Surabaya', '085733695414', 'Pegawai Negeri', '3101201821305924384249.jpg', '2018-01-31 21:02:01', '2018-01-31 21:30:59'),
-(37, 'Suwondo', '', 'suwondo@gmail.com', '$2y$10$/m84H3G183E.Xx5huaaxKuym5/JWTP7XMv8z2kcPduNz6NB2PlSEq', 'Jl. Wonorejo, Pasar Kembang, Surabaya', '089123333221', 'Pegawai Negeri', '31012018213426125x125.jpg', '2018-01-31 21:34:26', NULL),
-(39, 'Riyan', 'Supriatna', 'riyan@gmail.com', '$2y$10$rJpHyl67Wd9c5cco62eRou5TQUmjdTMi46JvOpFUG/kAC28qfBcMO', 'Jl. Adiwicaksana, Sedati, Sidoarjo', '08322212321', 'Pedagang', '310120182140024.jpg', '2018-01-31 21:40:02', NULL),
-(40, 'Wahyu', 'Ananda', 'wahyu@gmail.com', '$2y$10$dXy4cpJCFY.uQLdKNXhxhOh8qlydALWw2HoKft7.Rvex31tXMeoza', 'Jl. Jetis, Wates, Kediri', '089222345312', 'Petani', '310120182224242.jpg', '2018-01-31 22:24:24', NULL);
+(41, 'Dimas', 'Pramudya Sumarsis', 'dimasrajawali76@gmail.com', '$2y$10$UoT2V8yP3B5FHEXji1LGh.xJpo670nAym1RvPMHZTo6TRYGSGcne2', 'Jl Manukan Rejo III 1C / 8', '085881824590', 'Wirausaha', '0602201816042624384249.jpg', '2018-02-06 16:04:26', '2018-02-06 19:51:10'),
+(42, 'ali', 'alino', 'alino@gamail.com', '$2y$10$n0eFnPyvmL2OwQ4e5y2z8.3uUTaYypZTjA4Nx49r4SaLMWxy4lkRW', 'jerman', '089727265', 'Pedagang', '06022018223215sawah1.jpg', '2018-02-06 22:32:15', NULL);
 
 --
 -- Indexes for dumped tables
@@ -211,7 +207,7 @@ ALTER TABLE `tb_admin`
 -- AUTO_INCREMENT for table `tb_feedback`
 --
 ALTER TABLE `tb_feedback`
-  MODIFY `id_feedback` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_feedback` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT for table `tb_kategori`
 --
@@ -221,12 +217,12 @@ ALTER TABLE `tb_kategori`
 -- AUTO_INCREMENT for table `tb_lahan`
 --
 ALTER TABLE `tb_lahan`
-  MODIFY `id_lahan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id_lahan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 --
 -- AUTO_INCREMENT for table `tb_user`
 --
 ALTER TABLE `tb_user`
-  MODIFY `id_user` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;COMMIT;
+  MODIFY `id_user` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

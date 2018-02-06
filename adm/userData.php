@@ -69,6 +69,7 @@
       <input type="text" placeholder="Cari Nama Depan" name="cari">
       <button type="submit"><i class="fa fa-search"></i></button>
     </form> -->
+    <a href="fpdf/UserPDF.php" target="_blank"><button class="btn info"><i class="fa fa-file-pdf-o"></i> Print To PDF</button></a>
     <div style="overflow-x:auto;">
       <table id="myTable">
         <tr>
