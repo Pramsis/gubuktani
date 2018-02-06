@@ -28,6 +28,11 @@
   <h3>Ayo Daftarkan Sekarang Dan Iklankan Lahan Anda Secara Online</h3>
 </div>
 <div class="content">
+    <form class="example" action="/action_page.php">
+      <input type="text" placeholder="Cari Disini . . . " name="search">
+      <button type="submit">Cari</button>
+    </form>
+
   <div class="view-data">
     <h2><i class="fa fa-map"></i>&nbsp;Rekomendasi Lahan Terbaru</h2>
     <?php

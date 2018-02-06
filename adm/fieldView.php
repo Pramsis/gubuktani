@@ -58,8 +58,8 @@
         <tr><th>Tanah</th><td><?php echo $data['fasilitas_tanah']; ?></td></tr>
         <tr><th>Jalan</th><td><?php echo $data['fasilitas_jalan']; ?></td></tr>
         <tr><th>Pemandangan</th><td><?php echo $data['fasilitas_pemandangan']; ?></td></tr>
-        <tr><th>Waktu Dibuat</th><td><?php echo $data['create_at']; ?></td></tr>
-        <tr><th>Waktu Diperbarui</th><td><?php echo $data['update_at']; ?></td></tr>
+        <tr><th>Waktu Dibuat</th><td><?php echo $data['fieldCreate_at']; ?></td></tr>
+        <tr><th>Waktu Diperbarui</th><td><?php echo $data['fieldUpdate_at']; ?></td></tr>
         <tr><td colspan=2><a href="fieldData.php" class="btn act info" title="Kembali"><i class="fa fa-arrow-left"></i> Kembali</a></td></tr>
       </table>
 
