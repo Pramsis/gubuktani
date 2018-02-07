@@ -28,6 +28,7 @@ if(isset($_POST['kirim']))
             ':deskripsi'                => $_POST['deskripsi'],
             ':harga'                    => $_POST['harga'],
             ':kurun_sewa'               => $_POST['kurun_sewa'],
+            ':status'                   => $_POST['status'],
             ':fasilitas_irigasi'        => $_POST['fasilitas_irigasi'],
             ':fasilitas_tanah'          => $_POST['fasilitas_tanah'],
             ':fasilitas_jalan'          => $_POST['fasilitas_jalan'],
@@ -40,7 +41,7 @@ if(isset($_POST['kirim']))
 
       if(move_uploaded_file($tmp, $path))
       {
-        $sql = "INSERT INTO tb_lahan (id_user,id_kategori,judul,alamat_lahan,luas,sertifikasi,deskripsi,harga,kurun_sewa,fasilitas_irigasi,fasilitas_tanah,fasilitas_jalan,fasilitas_pemandangan,fieldCreate_at,foto_lahan) VALUES  (:id_user,:id_kategori,:judul,:alamat_lahan,:luas,:sertifikasi,:deskripsi,:harga,:kurun_sewa,:fasilitas_irigasi,:fasilitas_tanah,:fasilitas_jalan,:fasilitas_pemandangan,:fieldCreate_at,:foto_lahan)";
+        $sql = "INSERT INTO tb_lahan (id_user,id_kategori,judul,alamat_lahan,luas,sertifikasi,deskripsi,harga,kurun_sewa,status,fasilitas_irigasi,fasilitas_tanah,fasilitas_jalan,fasilitas_pemandangan,fieldCreate_at,foto_lahan) VALUES  (:id_user,:id_kategori,:judul,:alamat_lahan,:luas,:sertifikasi,:deskripsi,:harga,:kurun_sewa,:status,:fasilitas_irigasi,:fasilitas_tanah,:fasilitas_jalan,:fasilitas_pemandangan,:fieldCreate_at,:foto_lahan)";
         $stmt= $db->prepare($sql);
         $stmt->execute($params);
 

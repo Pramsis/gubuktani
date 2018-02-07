@@ -54,7 +54,7 @@
         }
 
         $starting_limit = ($page-1)*$limit;
-        $show = "SELECT * FROM tb_lahan INNER JOIN tb_kategori ON tb_lahan.id_kategori=tb_kategori.id_kategori ORDER BY fieldCreate_at DESC LIMIT $starting_limit , $limit";
+        $show = "SELECT * FROM tb_lahan INNER JOIN tb_kategori ON (tb_lahan.id_kategori=tb_kategori.id_kategori) WHERE status = 'Terverifikasi' ORDER BY fieldCreate_at DESC LIMIT $starting_limit , $limit";
         $showquery = $db->prepare($show);
         $showquery->execute();
 
@@ -101,7 +101,7 @@
         }
 
         $starting_limit = ($page-1)*$limit;
-        $show = "SELECT * FROM tb_lahan INNER JOIN tb_kategori ON tb_lahan.id_kategori=tb_kategori.id_kategori ORDER BY fieldCreate_at ASC LIMIT $starting_limit , $limit";
+        $show = "SELECT * FROM tb_lahan INNER JOIN tb_kategori ON (tb_lahan.id_kategori=tb_kategori.id_kategori) WHERE status = 'Terverifikasi' ORDER BY fieldCreate_at ASC LIMIT $starting_limit , $limit";
         $showquery = $db->prepare($show);
         $showquery->execute();
 

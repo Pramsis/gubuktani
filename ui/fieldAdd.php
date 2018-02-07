@@ -67,6 +67,7 @@
             <option>Bulanan</option>
             <option>Tahunan</option>
           </select>
+        <input type="hidden" name="status" value="Belum Terverifikasi">
         <h3>Fasilitas *Wajib Di Isi</h3>
         <p>Irigasi</p>
           <select name="fasilitas_irigasi" required/>

@@ -61,8 +61,7 @@
           <th>Judul</th>
           <th>Alamat Lahan</th>
           <th>Kategori</th>
-          <th>Luas</th>
-          <th>Harga</th>
+          <th>Status</th>
           <th>Pemilik</th>
           <th class="action-column">Aksi</th>
         </tr>
@@ -74,8 +73,7 @@
             <td><?php echo $value['judul'];?></td>
             <td><?php echo $value['alamat_lahan'];?></td>
             <td><?php echo $value['kategori'];?></td>
-            <td><?php echo $value['luas'];?> M<sup>2</sup></td>
-            <td>Rp. <?php echo $value['harga'];?></td>
+            <td><?php echo $value['status'];?></td>
             <td><?php echo $value['nama_depan'] . '&nbsp;' . $value['nama_belakang'];?></td>
             <td>
             <a href="fieldView.php?id_lahan=<?php echo $value['id_lahan']; ?>" class="btn act info"><i class="fa fa-eye"></i></a>

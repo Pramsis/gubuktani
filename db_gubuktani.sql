@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 06, 2018 at 07:51 PM
+-- Generation Time: Feb 07, 2018 at 04:15 AM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 5.6.31
 
@@ -114,6 +114,7 @@ CREATE TABLE `tb_lahan` (
   `deskripsi` text NOT NULL,
   `harga` int(11) NOT NULL,
   `kurun_sewa` varchar(10) NOT NULL,
+  `status` varchar(20) NOT NULL,
   `fasilitas_irigasi` varchar(60) NOT NULL,
   `fasilitas_tanah` varchar(60) NOT NULL,
   `fasilitas_jalan` varchar(60) NOT NULL,
@@ -127,10 +128,8 @@ CREATE TABLE `tb_lahan` (
 -- Dumping data for table `tb_lahan`
 --
 
-INSERT INTO `tb_lahan` (`id_lahan`, `id_user`, `id_kategori`, `judul`, `alamat_lahan`, `luas`, `sertifikasi`, `deskripsi`, `harga`, `kurun_sewa`, `fasilitas_irigasi`, `fasilitas_tanah`, `fasilitas_jalan`, `fasilitas_pemandangan`, `foto_lahan`, `fieldCreate_at`, `fieldUpdate_at`) VALUES
-(16, 41, 12, 'Disewakan Sawah Dekat Jalan Lintas Surabaya Solo', 'Jl. Peterongan, Desa Gurah, Kec Canggu Kab Nganjuk', '2000', 'SHM - Sertifikat Hak Milik', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 2000000, 'Tahunan', 'Langsung Dari Parit', 'Gambut', 'Pinggir Jalan Raya', 'Terasering', '06022018185320s3.jpg', '2018-02-06 16:14:07', '2018-02-06 22:57:40'),
-(17, 41, 12, 'Disewakan Sawah Daerah Kletek Sidoarjo', 'Jl.Sememi Jaya Utara', '2500', 'SHM - Sertifikat Hak Milik', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 5000000, 'Tahunan', 'Melewati Saluran Kecil', 'Gambut', 'Pinggir Jalan Raya', 'Tidak Ada', '06022018194925sawah5.jpg', '2018-02-06 19:49:25', '2018-02-06 22:57:14'),
-(18, 41, 13, 'Disewakan Kebun Jeruk Di Daerah Prigen Pasuruan', 'Jl . Puncak Prigen Kab Pasuruan', '3000', 'SHM - Sertifikat Hak Milik', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum.\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing \r\nelit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing \r\nelit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 20000000, 'Tahunan', 'Langsung Dari Parit', 'Gambut', 'Melewati Jalan Setapak Sawah', 'Tidak Ada', '06022018195507kebun4.jpg', '2018-02-06 19:55:07', NULL);
+INSERT INTO `tb_lahan` (`id_lahan`, `id_user`, `id_kategori`, `judul`, `alamat_lahan`, `luas`, `sertifikasi`, `deskripsi`, `harga`, `kurun_sewa`, `status`, `fasilitas_irigasi`, `fasilitas_tanah`, `fasilitas_jalan`, `fasilitas_pemandangan`, `foto_lahan`, `fieldCreate_at`, `fieldUpdate_at`) VALUES
+(19, 41, 12, 'Disewakan', 'Jl Manukan', '203213', 'SHM - Sertifikat Hak Milik', 'sadsa', 21321, 'Bulanan', 'Terverifikasi', 'Langsung Dari Parit', 'Gambut', 'Pinggir Jalan Raya', 'Terasering', '07022018085644menanam padi.jpg', '2018-02-07 08:56:44', '2018-02-07 10:05:53');
 
 -- --------------------------------------------------------
 
@@ -217,7 +216,7 @@ ALTER TABLE `tb_kategori`
 -- AUTO_INCREMENT for table `tb_lahan`
 --
 ALTER TABLE `tb_lahan`
-  MODIFY `id_lahan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id_lahan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 --
 -- AUTO_INCREMENT for table `tb_user`
 --

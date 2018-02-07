@@ -412,7 +412,7 @@ div.footer a:hover{
     margin: auto;
 }
 
-.form-tambah input[type=password],.form-tambah input[type=number],.form-tambah input[type=text],.form-tambah input[type=email]  {
+.form-tambah input[type=password],.form-tambah input[type=number],.form-tambah input[type=text],.form-tambah input[type=email],select,option {
     width: 100%;
     padding: 10px;
     margin-bottom: 8px;

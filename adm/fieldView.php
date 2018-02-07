@@ -60,7 +60,20 @@
         <tr><th>Pemandangan</th><td><?php echo $data['fasilitas_pemandangan']; ?></td></tr>
         <tr><th>Waktu Dibuat</th><td><?php echo $data['fieldCreate_at']; ?></td></tr>
         <tr><th>Waktu Diperbarui</th><td><?php echo $data['fieldUpdate_at']; ?></td></tr>
-        <tr><td colspan=2><a href="fieldData.php" class="btn act info" title="Kembali"><i class="fa fa-arrow-left"></i> Kembali</a></td></tr>
+        <tr><th>Status</th><td><?php echo $data['status']; ?></td></tr>
+        <form action="fieldProses.php" method="post">
+        <tr><td colspan=2><a href="fieldData.php" class="btn act info" title="Kembali"><i class="fa fa-arrow-left"></i> Kembali</a>
+        <?php if($data['status'] == "Terverifikasi"){?>
+        <input type="hidden" name="id_lahan" value="<?php echo $data['id_lahan'] ?>">
+        <input type="hidden" name="status" value="Belum Terverifikasi">
+        <input type="submit" name="kirim-edit" class="btn act danger" value="Batalkan Verifikasi">
+        <?php }else{ ?>
+        <input type="hidden" name="id_lahan" value="<?php echo $data['id_lahan'] ?>">
+        <input type="hidden" name="status" value="Terverifikasi">
+        <input type="submit" name="kirim-edit" class="btn act success" value="Verifikasi Iklan Ini">
+        <?php } ?>
+        </td></tr>
+        </form>
       </table>
 
 <?php include "template/footer.php"; ?>
