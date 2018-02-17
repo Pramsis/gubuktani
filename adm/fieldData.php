@@ -12,7 +12,7 @@
     $currentAdmin = $admin->getAdmin();
 
     $limit = 5;
-    $sql = "SELECT * FROM tb_lahan INNER JOIN tb_user ON tb_lahan.id_user=tb_user.id_user INNER JOIN tb_kategori ON tb_lahan.id_kategori=tb_kategori.id_kategori";
+    $sql = "SELECT * FROM tb_lahan INNER JOIN tb_user ON tb_lahan.id_user=tb_user.id_user INNER JOIN tb_kategori ON tb_lahan.id_kategori=tb_kategori.id_kategori ORDER BY status ASC";
     $query = $db->prepare($sql);
     $query->execute();
     $total_result = $query->rowCount();
@@ -28,7 +28,7 @@
     }
 
     $starting_limit = ($page-1)*$limit;
-    $show = "SELECT * FROM tb_lahan INNER JOIN tb_user ON tb_lahan.id_user=tb_user.id_user INNER JOIN tb_kategori ON tb_lahan.id_kategori=tb_kategori.id_kategori LIMIT $starting_limit , $limit";
+    $show = "SELECT * FROM tb_lahan INNER JOIN tb_user ON tb_lahan.id_user=tb_user.id_user INNER JOIN tb_kategori ON tb_lahan.id_kategori=tb_kategori.id_kategori ORDER BY status ASC LIMIT $starting_limit , $limit";
     $showquery = $db->prepare($show);
     $showquery->execute();
 

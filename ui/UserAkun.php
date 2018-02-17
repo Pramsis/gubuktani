@@ -19,15 +19,15 @@ if(isset($_POST['kirim']))
     $fotobaru = date('dmYHis').$foto;
 
     $params  = [
-            ':nama_depan'   => $_POST['nama_depan'],
+            ':nama_depan'    => $_POST['nama_depan'],
             ':nama_belakang' => $_POST['nama_belakang'],
-            ':email'    => $_POST['email'],
-            ':password'    => $hashPsswd,
-            ':alamat'    => $_POST['alamat'],
-            ':telepon'    => $_POST['telepon'],
-            ':profesi'    => $_POST['profesi'],
-            ':create_at' => date("Y-m-d H:i:s"),
-            ':foto' => $fotobaru,
+            ':email'         => $_POST['email'],
+            ':password'      => $hashPsswd,
+            ':alamat'        => $_POST['alamat'],
+            ':telepon'       => $_POST['telepon'],
+            ':profesi'       => $_POST['profesi'],
+            ':create_at'     => date("Y-m-d H:i:s"),
+            ':foto'          => $fotobaru,
         ];
 
     $path = "images/".$fotobaru;
@@ -65,14 +65,14 @@ elseif(isset($_POST['kirim-edit']))
     try {
 
         $params =[
-            'nama_depan' => $_POST['nama_depan'],
+            'nama_depan'      => $_POST['nama_depan'],
             'nama_belakang'   => $_POST['nama_belakang'],
-            'email'   => $_POST['email'],
-            'alamat'   => $_POST['alamat'],
-            'telepon'   => $_POST['telepon'],
-            'profesi'   => $_POST['profesi'],
-            'update_at' => date("Y-m-d H:i:s"),
-            'id_user'   => $_POST['id_user'],
+            'email'           => $_POST['email'],
+            'alamat'          => $_POST['alamat'],
+            'telepon'         => $_POST['telepon'],
+            'profesi'         => $_POST['profesi'],
+            'update_at'       => date("Y-m-d H:i:s"),
+            'id_user'         => $_POST['id_user'],
         ];
 
         $sql = "UPDATE tb_user SET nama_depan=:nama_depan,nama_belakang=:nama_belakang,email=:email,alamat=:alamat,telepon=:telepon,profesi=:profesi,update_at=:update_at WHERE id_user=:id_user";

@@ -65,7 +65,7 @@
     <h2><i class="fa fa-lock fa-fw" aria-hidden="true"></i>Data - Admin</h2>
     <?php if($currentAdmin['username'] == "admin"){ ?>
     <button id="myBtn" class="btn success">Tambah Data</button>
-    <a href="fpdf/AdminPDF.php" target="_blank"><button class="btn info"><i class="fa fa-file-pdf-o"></i> Print To PDF</button></a>
+    <a href="fpdf/AdminPDF.php" target="_blank"><button class="btn info"><i class="fa fa-file-pdf-o"></i> Cetak Ke PDF</button></a>
 
     <?php }else{ ?>
     <?php } ?>

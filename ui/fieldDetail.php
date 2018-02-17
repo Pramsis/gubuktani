@@ -22,7 +22,8 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Gubuktani - Akun</title>
+  <title>Gubuktani</title>
+  <link rel="shortcut icon" type="image/png" href="img/favicon.ico"/>
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
   <script type="text/javascript" href="js/responsiveNav.js"></script>
@@ -44,7 +45,7 @@
       <p><strong>Fasilitas</strong></p>
       <p><b>Irigasi</b> : <?php echo $data['fasilitas_irigasi']; ?> . <b>Tanah</b> :<?php echo $data['fasilitas_tanah']; ?> . <b>Jalan</b> :<?php echo $data['fasilitas_jalan']; ?> . <b>Pemandangan</b> :<?php echo $data['fasilitas_pemandangan']; ?></p>
       <p><strong>Deskripsi</strong></p>
-      <p><?php echo $data['deskripsi']; ?></p>
+      <p><?php echo nl2br($data['deskripsi']); ?></p>
       <p><strong>Harga</strong></p>
       <p>Rp .<?php echo $data['harga']; ?> / <?php echo $data['kurun_sewa']; ?></p>
     </div>

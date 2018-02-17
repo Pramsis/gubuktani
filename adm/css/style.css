@@ -583,3 +583,44 @@ input[type=number]::-webkit-outer-spin-button {
 
 
 }
+
+/* Style the container with a rounded border, grey background and some padding and margin */
+.landing {
+    background-color: #2ecc71;
+    padding: 16px;
+    margin: 16px 0;
+    color: #fff;
+}
+
+/* Clear floats after containers */
+.landing::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Float images inside the container to the left. Add a right margin, and style the image as a circle */
+.landing img {
+    float: left;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+/* Increase the font-size of a span element */
+.landing span {
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+/* Add media queries for responsiveness. This will landing both the text and the image inside the container */
+@media (max-width: 500px) {
+  .landing {
+    text-align: center;
+  }
+
+  .landing img {
+    margin: auto;
+    float: none;
+    display: block;
+  }
+}

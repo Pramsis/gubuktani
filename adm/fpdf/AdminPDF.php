@@ -2,6 +2,9 @@
 //memanggil library FPDF
 include '../db.php';
 require ('fpdf.php');
+
+date_default_timezone_set("Asia/Jakarta");
+
 //intance object dan memberikan pengaturan halaman PDF
 $pdf=new FPDF ('L','mm','A4');
 //membuat halaman baru
@@ -13,6 +16,8 @@ $pdf->Cell(0,10,'Data Admin',0,1,'C');
 $pdf->Cell(0,7,'',0,1);
 $pdf->SetFont('Arial','B',15);
 $pdf->Cell(0,10,'Gubuktani.co.id',0,1,'C');
+$pdf->SetFont('Arial','',15);
+$pdf->Cell(0,10,'Dicetak Pada Tanggal ' . date('d/m/Y'),0,1,'C');
 //memberikan space kebawah agar tidak terlalu rapat
 $pdf->Cell(10,7,'',0,1);
 

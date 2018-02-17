@@ -11,6 +11,8 @@
 
     $currentAdmin = $admin->getAdmin();
 
+    date_default_timezone_set("Asia/Jakarta");
+
  ?>
 
 <!DOCTYPE html>
@@ -29,14 +31,22 @@
 
 <div class="wrapper">
   <div class="content">
-    <h2>Beranda</h2>
-    <h2>Hai! Admin <?php echo $currentAdmin['nama'] ?></h2>
-    <h2>Selamat Datang di Gubuktani Admin Panel</h2>
-    <?php
+    <h2>Halaman Beranda</h2>
+    <div class="landing">
+      <h2>Selamat Datang! Admin <?php echo $currentAdmin['nama'] ?></h2>
+    </div>
+  
+    <div class="landing">
+      <h2>Hari Ini <?php echo date('l') ?> Tanggal <?php echo date('h/m/Y'); ?></h2>
+    </div>
 
-      date_default_timezone_set("Asia/Jakarta");
-      echo "Hari Ini " . date("l") . "&nbsp;" . date("Y m d") . "&nbsp" . date("h:i:s") .  "<br>";
-      ?>
+    <div class="landing">
+      <h2>Jumlah Pengguna Baru</h2>
+    </div>
+
+    <div class="landing">
+      <h2>Jumlah Lahan Belum Terverifikasi</h2>
+    </div>    
   </div>
 
 <?php include "template/footer.php"; ?>

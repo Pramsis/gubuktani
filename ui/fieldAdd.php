@@ -18,6 +18,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Gubuktani - Sewa Lahan Pertanian Kini Mudah Dan Cepat</title>
+  <link rel="shortcut icon" type="image/png" href="img/favicon.ico"/>
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
   <script type="text/javascript" href="js/responsiveNav.js"></script>
@@ -107,5 +108,6 @@
 <script type="text/javascript" src="js/tabForm.js"></script>
 <script type="text/javascript" src="js/uploadPreview.js"></script>
 <script type="text/javascript" src="js/textarea.js"></script>
+<script type="text/javascript" src="js/minchars.js"></script>
 </body>
 </html>

@@ -46,6 +46,7 @@
         <tr><th class="data-column">Judul</th><td><?php echo $data['judul']?></td></tr>
         <tr><th>Kategori</th><td><?php echo $data['kategori']; ?></td></tr>
         <tr><th>Pemilik</th><td><?php echo $data['nama_depan'] . '&nbsp;' . $data['nama_belakang'] ?></td></tr>
+        <tr><th>Kontak Pemilik</th><td><?php echo $data['telepon']; ?></td></tr>
         <tr><th>Luas</th><td><?php echo $data['luas']; ?></td></tr>
         <tr><th>Sertifikasi</th><td><?php echo $data['sertifikasi']; ?></td></tr>
         <tr><th>Harga</th><td><?php echo $data['harga']; ?></td></tr>
@@ -72,6 +73,7 @@
         <input type="hidden" name="status" value="Terverifikasi">
         <input type="submit" name="kirim-edit" class="btn act success" value="Verifikasi Iklan Ini">
         <?php } ?>
+        <a href="fpdf/FieldPDF.php?id_lahan=<?php echo $data['id_lahan'] ?>" target="_blank" class="btn act warning" title="Kembali"><i class="fa fa-file-pdf-o"></i> Cetak Ke PDF</a>
         </td></tr>
         </form>
       </table>

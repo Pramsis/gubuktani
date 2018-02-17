@@ -17,6 +17,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Gubuktani - Daftar</title>
+    <link rel="shortcut icon" type="image/png" href="img/favicon.ico"/>
     <link rel="stylesheet" href="css/style.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
     <script type="text/javascript" href="js/responsiveNav.js"></script>

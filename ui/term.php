@@ -14,8 +14,9 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Gubuktani - Aturan Dan Kondisi</title>
+    <link rel="shortcut icon" type="image/png" href="img/favicon.ico"/>
     <link rel="stylesheet" type="text/css" href="css/style.css">
-  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
   <script type="text/javascript" href="js/responsiveNav.js"></script>
 </head>
 <body onscroll="myFunction()">
@@ -37,13 +38,17 @@ Adapun data user kami simpan secara aman di pusat data Gubuktani.co.id.
 Dalam hal ini Gubuktani.co.id melindungi privasi user dan tidak akan memberikan data user Gubuktani.co.id kepada pihak ketiga tanpa melalui persetujuan user tersebut.
 Data Pengunjung Situs Gubuktani.co.id dan Aplikasi Gubuktani.co.id</p>
 
+<p><strong>Mengisi Form Iklan</strong></p>
+
+<p>Dalam mengisi form iklan , user harus memberikan data yang konkrit dan jujur . Segala bentuk iklan yang tidak konkrit maka iklan tersebut tidak di verifikasi oleh admin .</p>
+
 <p><strong>Hubungi Kami</strong></p>
 
 <p>Apabila terdapat pertanyaan terkait kebijakan privasi ini, silakan menghubungi kami melalui informasi kontak di bawah ini.</p>
 
 <p>Gubuktani.co.id</p>
 
-<p>Jl Manukan Rejo III Blok 1C No *</p>
+<p>Jl Manukan Rejo III Blok 1C No 8</p>
 
 <p>Surabaya, Jawa Timur 60185</p>
 

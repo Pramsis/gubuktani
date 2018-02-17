@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 07, 2018 at 04:15 AM
+-- Generation Time: Feb 17, 2018 at 06:04 PM
 -- Server version: 10.1.25-MariaDB
--- PHP Version: 5.6.31
+-- PHP Version: 7.1.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -95,7 +95,7 @@ INSERT INTO `tb_kategori` (`id_kategori`, `kategori`, `create_at`, `update_at`) 
 (14, 'Hutan Produksi', '2018-01-31 21:14:07', NULL),
 (15, 'Toga', '2018-01-31 21:14:11', NULL),
 (16, 'Hidroponik', '2018-01-31 21:15:37', NULL),
-(17, 'Tanah Kosong', '2018-01-31 21:15:57', NULL);
+(17, 'Tanah Kosong', '2018-01-31 21:15:57', '2018-02-16 13:55:48');
 
 -- --------------------------------------------------------
 
@@ -129,7 +129,10 @@ CREATE TABLE `tb_lahan` (
 --
 
 INSERT INTO `tb_lahan` (`id_lahan`, `id_user`, `id_kategori`, `judul`, `alamat_lahan`, `luas`, `sertifikasi`, `deskripsi`, `harga`, `kurun_sewa`, `status`, `fasilitas_irigasi`, `fasilitas_tanah`, `fasilitas_jalan`, `fasilitas_pemandangan`, `foto_lahan`, `fieldCreate_at`, `fieldUpdate_at`) VALUES
-(19, 41, 12, 'Disewakan', 'Jl Manukan', '203213', 'SHM - Sertifikat Hak Milik', 'sadsa', 21321, 'Bulanan', 'Terverifikasi', 'Langsung Dari Parit', 'Gambut', 'Pinggir Jalan Raya', 'Terasering', '07022018085644menanam padi.jpg', '2018-02-07 08:56:44', '2018-02-07 10:05:53');
+(21, 41, 12, 'Disewakan Kebun Sawit Wilayah Kalimantan Dijamin Profit', 'Jl, Sapuan , Pangkalanbun', '7000', 'SHM - Sertifikat Hak Milik', 'Disewakan Sip', 20000000, 'Tahunan', 'Terverifikasi', 'Langsung Dari Parit', 'Gambut', 'Melewati Jalan Setapak Sawah', 'Latar Belakang Gunung', '15022018084235kebun3.jpg', '2018-02-15 08:42:35', '2018-02-15 08:46:07'),
+(22, 41, 13, 'Disewakan Kebun Daerah Sulawesi Letak Strageris', 'Jl Desa Bau Bau Kec Doli Doli Kab Kendari Timur', '5000', 'Lainnya (PPJB,Girik,Adat,dll)', 'Dijamin Sip', 10000000, 'Tahunan', 'Terverifikasi', 'Menggunakan Pompa Air', 'Liat', 'Pinggir Jalan Raya', 'Latar Belakang Gunung', '15022018084548kebun1.jpg', '2018-02-15 08:45:48', '2018-02-15 21:59:18'),
+(23, 41, 12, 'Disewakan Sawah Harga Murah Di Jalan Sepanjang Sidoarjo', 'Jl. Jatirawa 22 Kec Bondol Kab Sukoharjo', '2000', 'SHM - Sertifikat Hak Milik', 'Disewakan Langsung Sawah .\r\n\r\nHarga Murah . \r\nLetak Strategis\r\nDekat Pasar Induk\r\n\r\nMinat Datang Langsung Ke Desa Subang , Dusun Rowo RT 6 RW 1 \r\nBapak Hadi', 2000000, 'Tahunan', 'Terverifikasi', 'Langsung Dari Parit', 'Gambut', 'Pinggir Jalan Raya', 'Terasering', '15022018225039sawah1.jpg', '2018-02-15 22:50:39', '2018-02-16 00:29:27'),
+(24, 41, 14, 'Disewakan Kebun Daerah Sulawesi Letak Strageris', 'Jl. Nasional Solo Jogja , Kab Magelang', '3000', 'SHM - Sertifikat Hak Milik', 'Sip', 20000000, 'Tahunan', 'Terverifikasi', 'Menggunakan Pompa Air', 'Liat', 'Melewati Jalan Setapak Sawah', 'Tidak Ada', '15022018225204sawah6.jpg', '2018-02-15 22:52:04', '2018-02-15 23:12:26');
 
 -- --------------------------------------------------------
 
@@ -157,7 +160,8 @@ CREATE TABLE `tb_user` (
 
 INSERT INTO `tb_user` (`id_user`, `nama_depan`, `nama_belakang`, `email`, `password`, `alamat`, `telepon`, `profesi`, `foto`, `create_at`, `update_at`) VALUES
 (41, 'Dimas', 'Pramudya Sumarsis', 'dimasrajawali76@gmail.com', '$2y$10$UoT2V8yP3B5FHEXji1LGh.xJpo670nAym1RvPMHZTo6TRYGSGcne2', 'Jl Manukan Rejo III 1C / 8', '085881824590', 'Wirausaha', '0602201816042624384249.jpg', '2018-02-06 16:04:26', '2018-02-06 19:51:10'),
-(42, 'ali', 'alino', 'alino@gamail.com', '$2y$10$n0eFnPyvmL2OwQ4e5y2z8.3uUTaYypZTjA4Nx49r4SaLMWxy4lkRW', 'jerman', '089727265', 'Pedagang', '06022018223215sawah1.jpg', '2018-02-06 22:32:15', NULL);
+(42, 'ali', 'alino', 'alino@gamail.com', '$2y$10$n0eFnPyvmL2OwQ4e5y2z8.3uUTaYypZTjA4Nx49r4SaLMWxy4lkRW', 'jerman', '089727265', 'Pedagang', '06022018223215sawah1.jpg', '2018-02-06 22:32:15', NULL),
+(43, 'Andri', 'Roni', 'andri@gmail.com', '$2y$10$xRoO.HDzLWt9j7jncsn/7eoG5UrZ1m3XrQi7kiHWd8RirTz6hNgEK', 'Jl Uka Dekat Roni', '087312322456', 'Pegawai Negeri', '07022018112258dwi_yan.jpg', '2018-02-07 11:22:58', '2018-02-07 11:26:12');
 
 --
 -- Indexes for dumped tables
@@ -216,12 +220,12 @@ ALTER TABLE `tb_kategori`
 -- AUTO_INCREMENT for table `tb_lahan`
 --
 ALTER TABLE `tb_lahan`
-  MODIFY `id_lahan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id_lahan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 --
 -- AUTO_INCREMENT for table `tb_user`
 --
 ALTER TABLE `tb_user`
-  MODIFY `id_user` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;COMMIT;
+  MODIFY `id_user` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

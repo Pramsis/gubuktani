@@ -15,9 +15,9 @@ if(isset($_POST['kirim']))
     {
 
     $params  = [
-            ':nama' => $_POST['nama'],
-            ':email' => $_POST['email'],
-            ':pesan' => $_POST['pesan'],
+            ':nama'      => $_POST['nama'],
+            ':email'     => $_POST['email'],
+            ':pesan'     => $_POST['pesan'],
             ':create_at' => date("Y-m-d H:i:s"),
             
         ];

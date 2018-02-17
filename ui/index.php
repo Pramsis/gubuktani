@@ -14,6 +14,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Gubuktani - Sewa Lahan Pertanian Kini Mudah Dan Cepat</title>
+  <link rel="shortcut icon" type="image/png" href="img/favicon.ico"/>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
   <script type="text/javascript" href="js/responsiveNav.js"></script>
@@ -28,85 +29,47 @@
   <h3>Ayo Daftarkan Sekarang Dan Iklankan Lahan Anda Secara Online</h3>
 </div>
 <div class="content">
-    <form class="example" action="/action_page.php">
-      <input type="text" placeholder="Cari Disini . . . " name="search">
-      <button type="submit">Cari</button>
-    </form>
 
   <div class="view-data">
-    <h2><i class="fa fa-map"></i>&nbsp;Rekomendasi Lahan Terbaru</h2>
-    <?php
-        
-        $limit = 3;
-        $sql = "SELECT * FROM tb_lahan INNER JOIN tb_kategori ON tb_lahan.id_kategori=tb_kategori.id_kategori ORDER BY fieldCreate_at DESC";
-        $query = $db->prepare($sql);
-        $query->execute();
-        $total_result = $query->rowCount();
-        $total_pages = ceil($total_result/$limit);
-
-        if(!isset($_GET['page']))
-        {
-          $page = 1;
-        }
-        else
-        {
-          $page = $_GET['page'];
-        }
-
-        $starting_limit = ($page-1)*$limit;
-        $show = "SELECT * FROM tb_lahan INNER JOIN tb_kategori ON (tb_lahan.id_kategori=tb_kategori.id_kategori) WHERE status = 'Terverifikasi' ORDER BY fieldCreate_at DESC LIMIT $starting_limit , $limit";
-        $showquery = $db->prepare($show);
-        $showquery->execute();
-
-        $data = $showquery->fetchAll();
-
-
-        foreach($data as $field): 
-      
-      ?>
-    <div class="responsive">
-      <div class="img">
-          <img src="images/<?php echo $field['foto_lahan'] ?>" style="min-width: 100%;min-height:200px;max-height: 200px; ">
-        <div class="desc">
-          <p><strong><?php echo $field['judul']?></strong></p>
-          <p><?php echo $field['kategori']; ?></p>
-          <p>Luas <?php echo $field['luas']; ?> M<sup>2</sup></p>
-          <p>Rp .<?php echo $field['harga']; ?> / <?php echo $field['kurun_sewa']; ?></p>
-        </div>
-        <a href="fieldDetail.php?id_lahan=<?php echo $field['id_lahan'] ?>" class="btn info" style="width: 100%;">Lihat Selengkapnya</a>
-      </div>
-    </div>
-    <?php endforeach; ?>
-      <div class="clearfix"></div>
-    </div>
-    <hr>
-    <div class="view-data">
+    <form class="example" method="get">
+      <input type="text" placeholder="Ketik Judul Iklan" name="cari" required/>
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
     <h2><i class="fa fa-map-o"></i>&nbsp;Lahan Sewa Terbaik</h2>
     <?php
         
-        $limit = 3;
-        $sql = "SELECT * FROM tb_lahan INNER JOIN tb_kategori ON tb_lahan.id_kategori=tb_kategori.id_kategori ORDER BY fieldCreate_at ASC";
-        $query = $db->prepare($sql);
-        $query->execute();
-        $total_result = $query->rowCount();
-        $total_pages = ceil($total_result/$limit);
+        if (isset($_GET['cari'])){
+            $cari = $_GET['cari'];
+            $sql = "SELECT * FROM tb_lahan INNER JOIN tb_kategori ON tb_lahan.id_kategori=tb_kategori.id_kategori WHERE status = 'Terverifikasi' AND  judul LIKE '%".$cari."%'";
+            $query = $db->prepare($sql);
+            $query->execute();
 
-        if(!isset($_GET['page']))
-        {
-          $page = 1;
+            $data = $query->fetchAll();
+        }else{
+
+          $limit = 9;
+          $sql = "SELECT * FROM tb_lahan INNER JOIN tb_kategori ON tb_lahan.id_kategori=tb_kategori.id_kategori WHERE status = 'Terverifikasi' ORDER BY fieldCreate_at ASC";
+          $query = $db->prepare($sql);
+          $query->execute();
+          $total_result = $query->rowCount();
+          $total_pages = ceil($total_result/$limit);
+
+          if(!isset($_GET['page']))
+          {
+            $page = 1;
+          }
+          else
+          {
+            $page = $_GET['page'];
+          }
+
+          $starting_limit = ($page-1)*$limit;
+          $show = "SELECT * FROM tb_lahan INNER JOIN tb_kategori ON (tb_lahan.id_kategori=tb_kategori.id_kategori) WHERE status = 'Terverifikasi' ORDER BY fieldCreate_at ASC LIMIT $starting_limit , $limit";
+          $showquery = $db->prepare($show);
+          $showquery->execute();
+
+          $data = $showquery->fetchAll();
         }
-        else
-        {
-          $page = $_GET['page'];
-        }
-
-        $starting_limit = ($page-1)*$limit;
-        $show = "SELECT * FROM tb_lahan INNER JOIN tb_kategori ON (tb_lahan.id_kategori=tb_kategori.id_kategori) WHERE status = 'Terverifikasi' ORDER BY fieldCreate_at ASC LIMIT $starting_limit , $limit";
-        $showquery = $db->prepare($show);
-        $showquery->execute();
-
-        $data = $showquery->fetchAll();
-
 
         foreach($data as $field): 
       
@@ -127,9 +90,14 @@
     <div class="clearfix"></div>
     <center>
     <div class="pagination">
-      <?php for($page=1; $page <= $total_pages ; $page++):?>
+    <?php if (isset($_GET['cari'])) {
+      echo "";
+      }else{ 
+        for($page=1; $page <= $total_pages ; $page++):?>
         <a href="<?php echo "?page=$page" ?>"><?php echo $page; ?></a>
-      <?php endfor; ?>
+      <?php endfor;
+        }
+       ?>
     </div>
     </center>
     <hr>

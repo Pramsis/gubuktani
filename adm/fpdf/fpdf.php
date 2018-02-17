@@ -1,4 +1,12 @@
 <?php
+/*******************************************************************************
+* FPDF                                                                         *
+*                                                                              *
+* Version: 1.81                                                                *
+* Date:    2015-12-20                                                          *
+* Author:  Olivier PLATHEY                                                     *
+*******************************************************************************/
+
 define('FPDF_VERSION','1.81');
 
 class FPDF
@@ -58,6 +66,10 @@ protected $ZoomMode;           // zoom display mode
 protected $LayoutMode;         // layout display mode
 protected $metadata;           // document properties
 protected $PDFVersion;         // PDF version number
+
+/*******************************************************************************
+*                               Public methods                                 *
+*******************************************************************************/
 
 function __construct($orientation='P', $unit='mm', $size='A4')
 {
