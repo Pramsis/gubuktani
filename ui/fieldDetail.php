@@ -33,21 +33,27 @@
   <h1>Gubuktani.co.id</h1>
 </div>
 <?php include "template/header.php"; ?>
+<div class="container-images">
+  <img src="images/<?php echo $data['foto_lahan'] ?>">
+</div>
 <div class="content content-akun">
   <div class="container-data detail">
     <h1><?php echo $data['judul'] ?></h1>
-      <a href="images/<?php echo $data['foto_lahan'] ?>"><center><img src="images/<?php echo $data['foto_lahan'] ?>"></center></a>
     <div class="caption">
       <p><strong>Alamat</strong></p>
       <p><?php echo $data['alamat_lahan']; ?></p>
       <p><strong>Luas & Sertifikasi</strong></p>
       <p><?php echo $data['luas']; ?> M<sup>2</sup> & <?php echo $data['sertifikasi']; ?></p>
       <p><strong>Fasilitas</strong></p>
-      <p><b>Irigasi</b> : <?php echo $data['fasilitas_irigasi']; ?> . <b>Tanah</b> :<?php echo $data['fasilitas_tanah']; ?> . <b>Jalan</b> :<?php echo $data['fasilitas_jalan']; ?> . <b>Pemandangan</b> :<?php echo $data['fasilitas_pemandangan']; ?></p>
+      <p><b>Irigasi</b> : <?php echo $data['fasilitas_irigasi']; ?> <b>Tanah</b> :<?php echo $data['fasilitas_tanah']; ?> <b>Jalan</b> :<?php echo $data['fasilitas_jalan']; ?> <b>Pemandangan</b> :<?php echo $data['fasilitas_pemandangan']; ?></p>
       <p><strong>Deskripsi</strong></p>
       <p><?php echo nl2br($data['deskripsi']); ?></p>
       <p><strong>Harga</strong></p>
       <p>Rp .<?php echo $data['harga']; ?> / <?php echo $data['kurun_sewa']; ?></p>
+      <p><strong>Status Verifikasi</strong></p>
+      <p><?php echo $data['status']; ?></p>
+      <p><strong>Kondisi</strong></p>
+      <p><?php echo $data['kondisi']; ?></p>
     </div>
   </div>
   <div class="container-akun">

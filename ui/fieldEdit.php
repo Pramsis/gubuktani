@@ -109,8 +109,14 @@
             <option>Terasering</option>
             <option>Latar Belakang Gunung</option>
           </select>
+        <h3>Kondisi</h3>
+          <select name="kondisi">
+            <option><?php echo $data['kondisi'] ?></option>
+            <option>Tersedia</option>
+            <option>Tersewa</option>
+          </select>
         <h3>Gambar Lahan</h3>
-        <a href="#" id="myBtn" class="btn" style="width: 100%; background: inherit; color: #333; border:2px solid #aaaaaa;">Ganti Foto</a>
+        <a href="#" id="myBtn" class="btn default" style="width: 100%;border:2px solid #aaaaaa;">Ganti Foto</a>
         <p><input type="submit" name="kirim-edit" class="success" value="Kirim Data"></p>
     </form>
   </div>

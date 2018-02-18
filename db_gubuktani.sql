@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 17, 2018 at 06:04 PM
+-- Generation Time: Feb 18, 2018 at 11:20 AM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 7.1.7
 
@@ -115,6 +115,7 @@ CREATE TABLE `tb_lahan` (
   `harga` int(11) NOT NULL,
   `kurun_sewa` varchar(10) NOT NULL,
   `status` varchar(20) NOT NULL,
+  `kondisi` varchar(10) NOT NULL,
   `fasilitas_irigasi` varchar(60) NOT NULL,
   `fasilitas_tanah` varchar(60) NOT NULL,
   `fasilitas_jalan` varchar(60) NOT NULL,
@@ -128,11 +129,8 @@ CREATE TABLE `tb_lahan` (
 -- Dumping data for table `tb_lahan`
 --
 
-INSERT INTO `tb_lahan` (`id_lahan`, `id_user`, `id_kategori`, `judul`, `alamat_lahan`, `luas`, `sertifikasi`, `deskripsi`, `harga`, `kurun_sewa`, `status`, `fasilitas_irigasi`, `fasilitas_tanah`, `fasilitas_jalan`, `fasilitas_pemandangan`, `foto_lahan`, `fieldCreate_at`, `fieldUpdate_at`) VALUES
-(21, 41, 12, 'Disewakan Kebun Sawit Wilayah Kalimantan Dijamin Profit', 'Jl, Sapuan , Pangkalanbun', '7000', 'SHM - Sertifikat Hak Milik', 'Disewakan Sip', 20000000, 'Tahunan', 'Terverifikasi', 'Langsung Dari Parit', 'Gambut', 'Melewati Jalan Setapak Sawah', 'Latar Belakang Gunung', '15022018084235kebun3.jpg', '2018-02-15 08:42:35', '2018-02-15 08:46:07'),
-(22, 41, 13, 'Disewakan Kebun Daerah Sulawesi Letak Strageris', 'Jl Desa Bau Bau Kec Doli Doli Kab Kendari Timur', '5000', 'Lainnya (PPJB,Girik,Adat,dll)', 'Dijamin Sip', 10000000, 'Tahunan', 'Terverifikasi', 'Menggunakan Pompa Air', 'Liat', 'Pinggir Jalan Raya', 'Latar Belakang Gunung', '15022018084548kebun1.jpg', '2018-02-15 08:45:48', '2018-02-15 21:59:18'),
-(23, 41, 12, 'Disewakan Sawah Harga Murah Di Jalan Sepanjang Sidoarjo', 'Jl. Jatirawa 22 Kec Bondol Kab Sukoharjo', '2000', 'SHM - Sertifikat Hak Milik', 'Disewakan Langsung Sawah .\r\n\r\nHarga Murah . \r\nLetak Strategis\r\nDekat Pasar Induk\r\n\r\nMinat Datang Langsung Ke Desa Subang , Dusun Rowo RT 6 RW 1 \r\nBapak Hadi', 2000000, 'Tahunan', 'Terverifikasi', 'Langsung Dari Parit', 'Gambut', 'Pinggir Jalan Raya', 'Terasering', '15022018225039sawah1.jpg', '2018-02-15 22:50:39', '2018-02-16 00:29:27'),
-(24, 41, 14, 'Disewakan Kebun Daerah Sulawesi Letak Strageris', 'Jl. Nasional Solo Jogja , Kab Magelang', '3000', 'SHM - Sertifikat Hak Milik', 'Sip', 20000000, 'Tahunan', 'Terverifikasi', 'Menggunakan Pompa Air', 'Liat', 'Melewati Jalan Setapak Sawah', 'Tidak Ada', '15022018225204sawah6.jpg', '2018-02-15 22:52:04', '2018-02-15 23:12:26');
+INSERT INTO `tb_lahan` (`id_lahan`, `id_user`, `id_kategori`, `judul`, `alamat_lahan`, `luas`, `sertifikasi`, `deskripsi`, `harga`, `kurun_sewa`, `status`, `kondisi`, `fasilitas_irigasi`, `fasilitas_tanah`, `fasilitas_jalan`, `fasilitas_pemandangan`, `foto_lahan`, `fieldCreate_at`, `fieldUpdate_at`) VALUES
+(24, 41, 14, 'Disewakan Kebun Daerah Sulawesi Letak Strageris', 'Jl. Nasional Solo Jogja , Kab Magelang', '3000', 'SHM - Sertifikat Hak Milik', 'Sip', 20000000, 'Tahunan', 'Terverifikasi', 'Tersedia', 'Menggunakan Pompa Air', 'Liat', 'Melewati Jalan Setapak Sawah', 'Tidak Ada', '15022018225204sawah6.jpg', '2018-02-15 22:52:04', '2018-02-18 16:58:43');
 
 -- --------------------------------------------------------
 

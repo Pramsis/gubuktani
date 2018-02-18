@@ -29,6 +29,7 @@ if(isset($_POST['kirim']))
             ':harga'                    => $_POST['harga'],
             ':kurun_sewa'               => $_POST['kurun_sewa'],
             ':status'                   => $_POST['status'],
+            ':kondisi'                  => $_POST['kondisi'],
             ':fasilitas_irigasi'        => $_POST['fasilitas_irigasi'],
             ':fasilitas_tanah'          => $_POST['fasilitas_tanah'],
             ':fasilitas_jalan'          => $_POST['fasilitas_jalan'],
@@ -41,7 +42,7 @@ if(isset($_POST['kirim']))
 
       if(move_uploaded_file($tmp, $path))
       {
-        $sql = "INSERT INTO tb_lahan (id_user,id_kategori,judul,alamat_lahan,luas,sertifikasi,deskripsi,harga,kurun_sewa,status,fasilitas_irigasi,fasilitas_tanah,fasilitas_jalan,fasilitas_pemandangan,fieldCreate_at,foto_lahan) VALUES  (:id_user,:id_kategori,:judul,:alamat_lahan,:luas,:sertifikasi,:deskripsi,:harga,:kurun_sewa,:status,:fasilitas_irigasi,:fasilitas_tanah,:fasilitas_jalan,:fasilitas_pemandangan,:fieldCreate_at,:foto_lahan)";
+        $sql = "INSERT INTO tb_lahan (id_user,id_kategori,judul,alamat_lahan,luas,sertifikasi,deskripsi,harga,kurun_sewa,status,kondisi,fasilitas_irigasi,fasilitas_tanah,fasilitas_jalan,fasilitas_pemandangan,fieldCreate_at,foto_lahan) VALUES  (:id_user,:id_kategori,:judul,:alamat_lahan,:luas,:sertifikasi,:deskripsi,:harga,:kurun_sewa,:status,:kondisi,:fasilitas_irigasi,:fasilitas_tanah,:fasilitas_jalan,:fasilitas_pemandangan,:fieldCreate_at,:foto_lahan)";
         $stmt= $db->prepare($sql);
         $stmt->execute($params);
 
@@ -77,6 +78,7 @@ elseif(isset($_POST['kirim-edit']))
             'sertifikasi'              => $_POST['sertifikasi'],
             'deskripsi'                => $_POST['deskripsi'],
             'harga'                    => $_POST['harga'],
+            'kondisi'                  => $_POST['kondisi'],
             'kurun_sewa'               => $_POST['kurun_sewa'],
             'fasilitas_irigasi'        => $_POST['fasilitas_irigasi'],
             'fasilitas_tanah'          => $_POST['fasilitas_tanah'],
@@ -86,7 +88,7 @@ elseif(isset($_POST['kirim-edit']))
             'id_lahan'                 => $_POST['id_lahan'],
         ];
 
-        $sql = "UPDATE tb_lahan SET id_user=:id_user,id_kategori=:id_kategori,judul=:judul,alamat_lahan=:alamat_lahan,luas=:luas,sertifikasi=:sertifikasi,deskripsi=:deskripsi,harga=:harga,kurun_sewa=:kurun_sewa,fasilitas_irigasi=:fasilitas_irigasi,fasilitas_tanah=:fasilitas_tanah,fasilitas_jalan=:fasilitas_jalan,fasilitas_pemandangan=:fasilitas_pemandangan,fieldUpdate_at=:fieldUpdate_at WHERE id_lahan=:id_lahan";
+        $sql = "UPDATE tb_lahan SET id_user=:id_user,id_kategori=:id_kategori,judul=:judul,alamat_lahan=:alamat_lahan,luas=:luas,sertifikasi=:sertifikasi,deskripsi=:deskripsi,harga=:harga,kondisi=:kondisi,kurun_sewa=:kurun_sewa,fasilitas_irigasi=:fasilitas_irigasi,fasilitas_tanah=:fasilitas_tanah,fasilitas_jalan=:fasilitas_jalan,fasilitas_pemandangan=:fasilitas_pemandangan,fieldUpdate_at=:fieldUpdate_at WHERE id_lahan=:id_lahan";
         $statement = $db->prepare($sql);
         $statement->execute($params);
 

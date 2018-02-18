@@ -28,14 +28,13 @@
   <h1>Sekarang Menyewa Lahan Pertanian Semakin Mudah Dan Cepat</h1>
   <h3>Ayo Daftarkan Sekarang Dan Iklankan Lahan Anda Secara Online</h3>
 </div>
+<form class="example" method="get">
+    <input type="text" placeholder="Ketik Judul Iklan" name="cari" required/>
+    <button type="submit"><i class="fa fa-search"></i></button>
+</form>
 <div class="content">
-
   <div class="view-data">
-    <form class="example" method="get">
-      <input type="text" placeholder="Ketik Judul Iklan" name="cari" required/>
-      <button type="submit"><i class="fa fa-search"></i></button>
-    </form>
-    <h2><i class="fa fa-map-o"></i>&nbsp;Lahan Sewa Terbaik</h2>
+    <h2><i class="fa fa-tree"></i>&nbsp;Lahan Sewa Terbaik</h2>
     <?php
         
         if (isset($_GET['cari'])){
@@ -76,6 +75,7 @@
       ?>
     <div class="responsive">
       <div class="img">
+        <a class="btn <?php if($field['kondisi'] == "Tersedia"){echo "statsChange";}else{echo "statsChange2";}?>" style="width: 100%;"><?php echo $field['kondisi'] ?></a>
           <img src="images/<?php echo $field['foto_lahan'] ?>" style="min-width: 100%;min-height:200px;max-height: 200px; ">
         <div class="desc">
           <p><strong><?php echo $field['judul']?></strong></p>
@@ -118,7 +118,7 @@
   </div> 
     <hr>
     <div class="Whyrow">
-      <h2><i class="fa fa-tags"></i>&nbsp; Alasan Memilih Gubuktani.co.id</h2>
+      <h2><i class="fa fa-thumbs-o-up"></i>&nbsp; Alasan Memilih Gubuktani.co.id</h2>
       <div class="Whycolumn">
         <div class="Whycard">
           <img src="img/1.jpg" style="width:100%; border-radius: 100%;">
