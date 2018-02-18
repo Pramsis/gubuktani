@@ -62,6 +62,7 @@
         <tr><th>Waktu Dibuat</th><td><?php echo $data['fieldCreate_at']; ?></td></tr>
         <tr><th>Waktu Diperbarui</th><td><?php echo $data['fieldUpdate_at']; ?></td></tr>
         <tr><th>Status</th><td><?php echo $data['status']; ?></td></tr>
+        <tr><th>Kondisi</th><td><?php echo $data['kondisi']; ?></td></tr>
         <form action="fieldProses.php" method="post">
         <tr><td colspan=2><a href="fieldData.php" class="btn act info" title="Kembali"><i class="fa fa-arrow-left"></i> Kembali</a>
         <?php if($data['status'] == "Terverifikasi"){?>

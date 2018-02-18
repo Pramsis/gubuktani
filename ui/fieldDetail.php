@@ -36,7 +36,7 @@
 <div class="container-images">
   <img src="images/<?php echo $data['foto_lahan'] ?>">
 </div>
-<div class="content content-akun">
+<div class="content content-akun" style="padding-top: 0px;">
   <div class="container-data detail">
     <h1><?php echo $data['judul'] ?></h1>
     <div class="caption">

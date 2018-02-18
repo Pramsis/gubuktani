@@ -132,5 +132,11 @@ $pdf->Cell(55.4,6,'Status',1,0);
 $pdf->SetFont('Arial','',8);
 $pdf->Cell(223.6,6,$data['status'],1,0);
 
+$pdf->Cell(10,7,'',0,1);
+$pdf->SetFont('Arial','B',8);
+$pdf->Cell(55.4,6,'Kondisi',1,0);
+$pdf->SetFont('Arial','',8);
+$pdf->Cell(223.6,6,$data['kondisi'],1,0);
+
 $pdf->Output();
 ?>

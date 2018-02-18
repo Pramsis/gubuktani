@@ -97,7 +97,7 @@
         <a href="<?php echo "?page=$page" ?>"><?php echo $page; ?></a>
       <?php endfor;
         }
-       ?>
+    ?>
     </div>
     </center>
     <hr>
