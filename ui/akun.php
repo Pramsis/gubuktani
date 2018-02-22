@@ -42,8 +42,6 @@
     <p><?php echo $data['alamat'] ?> . <?php echo $data['profesi'] ?></p>
     <p></p>
     <a href="akunEdit.php?id_user=<?php echo $currentUser['id_user'] ?>" class="btn info">Sunting Profil</a>
-    <a id="myBtn" class="btn info" title="Foto Profil"><i class="fa fa-camera"></i></a>
-    <a href="akunEditPass.php?id_user=<?php echo $currentUser['id_user'] ?>" class="btn warning" title="Password"><i class="fa fa-lock"></i></a>
   </div>
   <div id="myModal" class="modal">
       <div class="modal-content">
@@ -111,5 +109,6 @@
 </div>
 <?php include "template/footer.php"; ?>
 <script type="text/javascript" src="js/sticky.js"></script>
+<script type="text/javascript" src="js/modal.js"></script>
 </body>
 </html>

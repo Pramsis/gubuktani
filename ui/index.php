@@ -154,5 +154,6 @@
 <?php include "template/footer.php"; ?>
 <script type="text/javascript" src="js/sticky.js"></script>
 <script type="text/javascript" src="js/tab.js"></script>
+<script type="text/javascript" src="js/modal.js"></script>
 </body>
 </html>

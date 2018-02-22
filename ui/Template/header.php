@@ -25,15 +25,14 @@
           <a href='login.php' class="<?php if(($a == $b . $c[1]) || ($a == $b . $c[2])){echo $d;}?>" style='float:right;'>Login</a>
         <?php }else{ ?>
           <a href='logout.php' style='float:right;'>Logout</a>
-          <a href='akun.php?id_user=<?php echo $currentUser['id_user']; ?>' class="<?php if(($a == $b . $c[3]) || ($a == $b . $c[4]) || ($a == $b . $c[5])){echo $d;}?>" style='float:right; text-transform:capitalize;'>Akun <?php echo $currentUser['nama_depan'] ?></a>
           <div class="dropdown">
-            <button class="dropbtn">Dropdown 
+            <button class="dropbtn">Akun <?php echo $currentUser['nama_depan'] ?>
               <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
-              <a href="#">Link 1</a>
-              <a href="#">Link 2</a>
-              <a href="#">Link 3</a>
+              <a href='akun.php?id_user=<?php echo $currentUser['id_user']; ?>'>Profil</a>
+              <a id="myBtn" style="cursor: pointer;">Edit Gambar</a>
+              <a href='akunEditPass.php?id_user=<?php echo $currentUser['id_user']; ?>'>Ganti Password</a>
             </div>
           </div> 
        <?php } ?>
@@ -44,3 +43,15 @@
     </form>
   </div>
 </div>
+<div id="myModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-body">
+        <span class="close">&times;</span>
+        <form method="post" action="UserAkun.php" id="regForm" enctype="multipart/form-data">
+          <input type="hidden" name="id_user" value="<?php echo $data['id_user'] ?>">
+          <input type="file" name="foto">
+          <button type="submit" name="ganti-foto">Ganti Foto Profil</button>
+        </form>
+      </div>
+    </div>
+  </div>

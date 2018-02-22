@@ -33,7 +33,7 @@
   <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
   <script type="text/javascript" href="js/responsiveNav.js"></script>
 </head>
-<body onscroll="mFunction()">
+<body onscroll="myFunction()">
 <div class="header">
   <h1>Gubuktani.co.id</h1>
 </div>
@@ -45,7 +45,7 @@
       <p><span><?php echo $data['nama_depan'] . '&nbsp;' . $data['nama_belakang']?></span> <?php echo $data['email'] ?> . <?php echo $data['telepon'] ?></p>
       <p><?php echo $data['alamat'] ?> . <?php echo $data['profesi'] ?></p>
       <p></p>
-      <a href="akunEdit.php?id_user=<?php echo $data['id_user'] ?>" class="btn success" title="Kembali"><i class="fa fa-arrow-left"></i></a>
+      <a href="akunEdit.php?id_user=<?php echo $data['id_user'] ?>" class="btn success" title="Kembali"><i class="fa fa-arrow-left"></i>&nbsp; Kembali</a>
     </div>
     <div class="container-data">
       <form method="post" action="UserAkun.php" id="regForm">
@@ -66,6 +66,7 @@
 <?php include "template/footer.php"; ?>
 <script type="text/javascript" src="js/sticky.js"></script>
 <script type="text/javascript" src="js/minchars.js"></script>
+<script type="text/javascript" src="js/modal.js"></script>
 </body>
 </html>
 

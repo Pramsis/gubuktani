@@ -111,6 +111,6 @@
 <script type="text/javascript" src="js/textarea.js"></script>
 <script type="text/javascript" src="js/minchars.js"></script>
 <script type="text/javascript" src="js/rupiah.js"></script>
-
+<script type="text/javascript" src="js/modal.js"></script>
 </body>
 </html>

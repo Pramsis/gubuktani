@@ -79,6 +79,7 @@
 <script type="text/javascript" src="js/sticky.js"></script>
 <script type="text/javascript" src="js/tab.js"></script>
 <script type="text/javascript" src="js/map.js"></script>
+<script type="text/javascript" src="js/modal.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDG3_QyukKO6GUZEm0AJfoG8T5teeb9dAo&callback=myMap" async defer></script>
 </body>
 </html>

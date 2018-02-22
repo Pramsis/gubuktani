@@ -136,7 +136,7 @@ body,html {
 }
 
 .dropdown {
-  float: left;
+  float: right;
   overflow: hidden;
 }
 
@@ -154,7 +154,7 @@ body,html {
 
 /* Add a red background color to navbar links on hover */
 .navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: red;
+  background-color: #2ecc71;
 }
 
 /* Dropdown content (hidden by default) */
@@ -788,7 +788,7 @@ table .btn{
 
 /* The Close Button */
 .close {
-    color: white;
+    color: #333;
     float: right;
     font-size: 28px;
     font-weight: bold;

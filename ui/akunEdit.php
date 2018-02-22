@@ -48,25 +48,6 @@
       <p><?php echo $data['alamat'] ?> . <?php echo $data['profesi'] ?></p>
       <p></p>
     </div>
-      
-    <div id="myModal" class="modal">
-      <div class="modal-content">
-        <div class="modal-header">
-          <span class="close">&times;</span>
-          <h2>Ganti Foto Profil</h2>
-        </div>
-        <div class="modal-body">
-          <form method="post" action="UserAkun.php" id="regForm" enctype="multipart/form-data">
-            <input type="hidden" name="id_user" value="<?php echo $data['id_user'] ?>">
-            <input type="file" name="foto">
-            <button type="submit" name="ganti-foto">Ganti Foto Profil</button>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <h3>gubuktani.co.id</h3>
-        </div>
-      </div>
-    </div>
     <div class="container-data">
       <form method="post" action="UserAkun.php" id="regForm">
         <input type="hidden" name="id_user" onfocus="this.value=''" value="<?php echo $data['id_user'] ?>">

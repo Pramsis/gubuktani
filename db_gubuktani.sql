@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.0
--- https://www.phpmyadmin.net/
+-- version 4.5.1
+-- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 18, 2018 at 11:20 AM
--- Server version: 10.1.25-MariaDB
--- PHP Version: 7.1.7
+-- Generation Time: 22 Feb 2018 pada 05.48
+-- Versi Server: 10.1.19-MariaDB
+-- PHP Version: 5.6.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -25,7 +23,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_admin`
+-- Struktur dari tabel `tb_admin`
 --
 
 CREATE TABLE `tb_admin` (
@@ -39,7 +37,7 @@ CREATE TABLE `tb_admin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tb_admin`
+-- Dumping data untuk tabel `tb_admin`
 --
 
 INSERT INTO `tb_admin` (`id_admin`, `nama`, `username`, `password`, `email`, `create_at`, `update_at`) VALUES
@@ -51,7 +49,7 @@ INSERT INTO `tb_admin` (`id_admin`, `nama`, `username`, `password`, `email`, `cr
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_feedback`
+-- Struktur dari tabel `tb_feedback`
 --
 
 CREATE TABLE `tb_feedback` (
@@ -64,7 +62,7 @@ CREATE TABLE `tb_feedback` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tb_feedback`
+-- Dumping data untuk tabel `tb_feedback`
 --
 
 INSERT INTO `tb_feedback` (`id_feedback`, `nama`, `email`, `pesan`, `create_at`, `update_at`) VALUES
@@ -75,7 +73,7 @@ INSERT INTO `tb_feedback` (`id_feedback`, `nama`, `email`, `pesan`, `create_at`,
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_kategori`
+-- Struktur dari tabel `tb_kategori`
 --
 
 CREATE TABLE `tb_kategori` (
@@ -86,7 +84,7 @@ CREATE TABLE `tb_kategori` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tb_kategori`
+-- Dumping data untuk tabel `tb_kategori`
 --
 
 INSERT INTO `tb_kategori` (`id_kategori`, `kategori`, `create_at`, `update_at`) VALUES
@@ -100,7 +98,7 @@ INSERT INTO `tb_kategori` (`id_kategori`, `kategori`, `create_at`, `update_at`) 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_lahan`
+-- Struktur dari tabel `tb_lahan`
 --
 
 CREATE TABLE `tb_lahan` (
@@ -126,16 +124,18 @@ CREATE TABLE `tb_lahan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tb_lahan`
+-- Dumping data untuk tabel `tb_lahan`
 --
 
 INSERT INTO `tb_lahan` (`id_lahan`, `id_user`, `id_kategori`, `judul`, `alamat_lahan`, `luas`, `sertifikasi`, `deskripsi`, `harga`, `kurun_sewa`, `status`, `kondisi`, `fasilitas_irigasi`, `fasilitas_tanah`, `fasilitas_jalan`, `fasilitas_pemandangan`, `foto_lahan`, `fieldCreate_at`, `fieldUpdate_at`) VALUES
-(24, 41, 14, 'Disewakan Kebun Daerah Sulawesi Letak Strageris', 'Jl. Nasional Solo Jogja , Kab Magelang', '3000', 'SHM - Sertifikat Hak Milik', 'Sip', 20000000, 'Tahunan', 'Terverifikasi', 'Tersedia', 'Menggunakan Pompa Air', 'Liat', 'Melewati Jalan Setapak Sawah', 'Tidak Ada', '15022018225204sawah6.jpg', '2018-02-15 22:52:04', '2018-02-18 16:58:43');
+(24, 41, 14, 'Disewakan Kebun Daerah Sulawesi Letak Strageris', 'Jl. Nasional Solo Jogja , Kab Magelang', '3000', 'SHM - Sertifikat Hak Milik', 'Sip', 20000000, 'Tahunan', 'Terverifikasi', 'Tersedia', 'Menggunakan Pompa Air', 'Liat', 'Melewati Jalan Setapak Sawah', 'Tidak Ada', '22022018074226sawah6.jpg', '2018-02-15 22:52:04', '2018-02-22 07:42:26'),
+(25, 44, 12, 'Sewakan Sawah Murah Surabaya Pusat Dijamin Profit', 'simo mulyo baru block 5b/26', '100', 'HGB - Hak Guna Bangunan', 'tanpa perantara', 350000, 'Tahunan', 'Terverifikasi', 'Tersedia', 'Menggunakan Pompa Air', 'Humus', 'Melewati Jalan Setapak Sawah', 'Terasering', '22022018090802sawah3.jpg', '2018-02-22 09:08:02', '2018-02-22 09:15:28'),
+(26, 44, 12, 'Disewakan Sawah Dengan Cepat Daerah Kedung Baruk', 'kedung baruk no 25', '1000', 'HGB - Hak Guna Bangunan', 'harga tanah miring', 15000, 'Tahunan', 'Terverifikasi', 'Tersewa', 'Langsung Dari Parit', 'Liat', 'Pinggir Jalan Raya', 'Latar Belakang Gunung', '22022018091019sawah1.jpg', '2018-02-22 09:10:19', '2018-02-22 09:45:23');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_user`
+-- Struktur dari tabel `tb_user`
 --
 
 CREATE TABLE `tb_user` (
@@ -153,13 +153,14 @@ CREATE TABLE `tb_user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tb_user`
+-- Dumping data untuk tabel `tb_user`
 --
 
 INSERT INTO `tb_user` (`id_user`, `nama_depan`, `nama_belakang`, `email`, `password`, `alamat`, `telepon`, `profesi`, `foto`, `create_at`, `update_at`) VALUES
 (41, 'Dimas', 'Pramudya Sumarsis', 'dimasrajawali76@gmail.com', '$2y$10$UoT2V8yP3B5FHEXji1LGh.xJpo670nAym1RvPMHZTo6TRYGSGcne2', 'Jl Manukan Rejo III 1C / 8', '085881824590', 'Wirausaha', '0602201816042624384249.jpg', '2018-02-06 16:04:26', '2018-02-06 19:51:10'),
 (42, 'ali', 'alino', 'alino@gamail.com', '$2y$10$n0eFnPyvmL2OwQ4e5y2z8.3uUTaYypZTjA4Nx49r4SaLMWxy4lkRW', 'jerman', '089727265', 'Pedagang', '06022018223215sawah1.jpg', '2018-02-06 22:32:15', NULL),
-(43, 'Andri', 'Roni', 'andri@gmail.com', '$2y$10$xRoO.HDzLWt9j7jncsn/7eoG5UrZ1m3XrQi7kiHWd8RirTz6hNgEK', 'Jl Uka Dekat Roni', '087312322456', 'Pegawai Negeri', '07022018112258dwi_yan.jpg', '2018-02-07 11:22:58', '2018-02-07 11:26:12');
+(43, 'Andri', 'Roni', 'andri@gmail.com', '$2y$10$xRoO.HDzLWt9j7jncsn/7eoG5UrZ1m3XrQi7kiHWd8RirTz6hNgEK', 'Jl Uka Dekat Roni', '087312322456', 'Pegawai Negeri', '07022018112258dwi_yan.jpg', '2018-02-07 11:22:58', '2018-02-07 11:26:12'),
+(44, 'imron', 'rosyadi', 'rosyadi@gmail.com', '$2y$10$bY6.DhLaFQtPJHnxvmee8.vEyoxoF1qhI4Hc4d9A7ASiTUoCU9C6O', 'simo hilir', '0838265543214', 'Pegawai Negeri', '22022018090430re-nainggolan2.jpg', '2018-02-22 09:04:30', NULL);
 
 --
 -- Indexes for dumped tables
@@ -218,13 +219,12 @@ ALTER TABLE `tb_kategori`
 -- AUTO_INCREMENT for table `tb_lahan`
 --
 ALTER TABLE `tb_lahan`
-  MODIFY `id_lahan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id_lahan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 --
 -- AUTO_INCREMENT for table `tb_user`
 --
 ALTER TABLE `tb_user`
-  MODIFY `id_user` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;COMMIT;
-
+  MODIFY `id_user` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

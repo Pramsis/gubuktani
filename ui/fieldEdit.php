@@ -145,5 +145,6 @@
 <script type="text/javascript" src="js/uploadPreview.js"></script>
 <script type="text/javascript" src="js/modal.js"></script>
 <script type="text/javascript" src="js/textarea.js"></script>
+<script type="text/javascript" src="js/modal.js"></script>
 </body>
 </html>
