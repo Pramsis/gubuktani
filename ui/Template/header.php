@@ -26,12 +26,12 @@
         <?php }else{ ?>
           <a href='logout.php' style='float:right;'>Logout</a>
           <div class="dropdown">
-            <button class="dropbtn">Akun <?php echo $currentUser['nama_depan'] ?>
+            <button class="dropbtn">Akun <?php echo $currentUser['nama_depan'] ?>&nbsp;
               <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
               <a href='akun.php?id_user=<?php echo $currentUser['id_user']; ?>'>Profil</a>
-              <a id="myBtn" style="cursor: pointer;">Edit Gambar</a>
+              <a id="myBtn" style="cursor: pointer;">Edit Foto Profil</a>
               <a href='akunEditPass.php?id_user=<?php echo $currentUser['id_user']; ?>'>Ganti Password</a>
             </div>
           </div> 

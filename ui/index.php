@@ -40,6 +40,15 @@
             $query->execute();
 
             $data = $query->fetchAll();
+
+            if ($query->rowCount() > 0) {
+              echo "<p style='text-align: center;'>" . "Hasil Pencarian Dari " . $cari . "</p>";
+            }else{
+              echo "<p style='text-align: center;'>" . "Hasil "  . $cari .  " Tidak Ada Dalam Judul" . "</p>";
+            }
+        
+            
+        
         }else{
 
           $limit = 9;

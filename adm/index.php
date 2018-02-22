@@ -13,6 +13,12 @@
 
     date_default_timezone_set("Asia/Jakarta");
 
+    $sql = "SELECT * FROM tb_lahan INNER JOIN tb_kategori ON tb_lahan.id_kategori=tb_kategori.id_kategori WHERE status = 'Belum Terverifikasi' ORDER BY fieldCreate_at ASC";
+    $query = $db->prepare($sql);
+    $query->execute();
+
+    $data = $query->rowCount();
+
  ?>
 
 <!DOCTYPE html>
@@ -41,11 +47,7 @@
     </div>
 
     <div class="landing">
-      <h2>Jumlah Pengguna Baru</h2>
-    </div>
-
-    <div class="landing">
-      <h2>Jumlah Lahan Belum Terverifikasi</h2>
+      <h2>Jumlah Lahan Belum Terverifikasi <?php echo $data; ?></h2>
     </div>    
   </div>
 

@@ -17,6 +17,7 @@ if(isset($_POST['kirim']))
     $foto = $_FILES['foto_lahan']['name'];
     $tmp = $_FILES['foto_lahan']['tmp_name'];
     $fotobaru = date('dmYHis').$foto;
+    $rupiah = str_replace('.','',$_POST['harga']);
 
     $params  = [
             ':id_user'                  => $_POST['id_user'],
@@ -26,7 +27,7 @@ if(isset($_POST['kirim']))
             ':luas'                     => $_POST['luas'],
             ':sertifikasi'              => $_POST['sertifikasi'],
             ':deskripsi'                => $_POST['deskripsi'],
-            ':harga'                    => $_POST['harga'],
+            ':harga'                    => $rupiah,
             ':kurun_sewa'               => $_POST['kurun_sewa'],
             ':status'                   => $_POST['status'],
             ':kondisi'                  => $_POST['kondisi'],
@@ -66,6 +67,7 @@ elseif(isset($_POST['kirim-edit']))
     $stmt = $db->prepare($sql);
     $stmt->execute([':id_lahan'=>$lahan_id]);
     $data = $stmt->fetch();
+    $rupiah = str_replace('.','',$_POST['harga']);
 
     try {
 
@@ -77,7 +79,7 @@ elseif(isset($_POST['kirim-edit']))
             'luas'                     => $_POST['luas'],
             'sertifikasi'              => $_POST['sertifikasi'],
             'deskripsi'                => $_POST['deskripsi'],
-            'harga'                    => $_POST['harga'],
+            'harga'                    => $rupiah,
             'kondisi'                  => $_POST['kondisi'],
             'kurun_sewa'               => $_POST['kurun_sewa'],
             'fasilitas_irigasi'        => $_POST['fasilitas_irigasi'],

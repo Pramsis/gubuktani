@@ -73,7 +73,7 @@
         <p>Deskripsi</p>
         <textarea placeholder="Masukkan Deskripsi" onKeyUp='textCounter(this)' wrap='physical' rows='1' cols='60' oninput="this.className = ''" name="deskripsi"><?php echo $data['deskripsi'] ?></textarea>
         <p>Harga</p>
-        <input type="number" placeholder="Harga Pertahun" oninput="this.className = ''" name="harga" value="<?php echo $data['harga'] ?>">
+        <input type="text" id="tanpa-rupiah" placeholder="Harga Pertahun" oninput="this.className = ''" name="harga" value="<?php echo $data['harga'] ?>">
         <p>Kurun Sewa</p>
           <select name="kurun_sewa" required/>
             <option><?php echo $data['kurun_sewa'] ?></option>
@@ -144,6 +144,7 @@
 <script type="text/javascript" src="js/tabForm.js"></script>
 <script type="text/javascript" src="js/uploadPreview.js"></script>
 <script type="text/javascript" src="js/modal.js"></script>
+<script type="text/javascript" src="js/rupiah.js"></script>
 <script type="text/javascript" src="js/textarea.js"></script>
 <script type="text/javascript" src="js/modal.js"></script>
 </body>

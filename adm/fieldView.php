@@ -45,7 +45,6 @@
         <tr><th class="data-column">Foto Lahan</th><td style="padding: 0px 0px;"><img src="../ui/images/<?php echo $data['foto_lahan'] ?>" width="100%" height="150px"></td></tr>
         <tr><th class="data-column">Judul</th><td><?php echo $data['judul']?></td></tr>
         <tr><th>Kategori</th><td><?php echo $data['kategori']; ?></td></tr>
-        <tr><th>Pemilik</th><td><?php echo $data['nama_depan'] . '&nbsp;' . $data['nama_belakang'] ?></td></tr>
         <tr><th>Kontak Pemilik</th><td><?php echo $data['telepon']; ?></td></tr>
         <tr><th>Luas</th><td><?php echo $data['luas']; ?></td></tr>
         <tr><th>Sertifikasi</th><td><?php echo $data['sertifikasi']; ?></td></tr>
@@ -64,22 +63,24 @@
         <tr><th>Status</th><td><?php echo $data['status']; ?></td></tr>
         <tr><th>Kondisi</th><td><?php echo $data['kondisi']; ?></td></tr>
         <form action="fieldProses.php" method="post">
-        <tr><td colspan=2><a href="fieldData.php" class="btn act info" title="Kembali"><i class="fa fa-arrow-left"></i> Kembali</a>
-        <?php if($data['status'] == "Terverifikasi"){?>
-        <input type="hidden" name="id_lahan" value="<?php echo $data['id_lahan'] ?>">
-        <input type="hidden" name="status" value="Belum Terverifikasi">
-        <input type="submit" name="kirim-edit" class="btn act danger" value="Batalkan Verifikasi">
-        <?php }else{ ?>
-        <input type="hidden" name="id_lahan" value="<?php echo $data['id_lahan'] ?>">
-        <input type="hidden" name="status" value="Terverifikasi">
-        <input type="submit" name="kirim-edit" class="btn act success" value="Verifikasi Iklan Ini">
-        <?php } ?>
-        <a href="fpdf/FieldPDF.php?id_lahan=<?php echo $data['id_lahan'] ?>" target="_blank" class="btn act warning" title="Kembali"><i class="fa fa-file-pdf-o"></i> Cetak Ke PDF</a>
+        <tr>
+            <td colspan=2>
+                <a href="fieldData.php" class="btn act info" title="Kembali"><i class="fa fa-arrow-left"></i> Kembali</a>
+                <?php if($data['status'] == "Terverifikasi"){?>
+                    <input type="hidden" name="id_lahan" value="<?php echo $data['id_lahan'] ?>">
+                    <input type="hidden" name="status" value="Belum Terverifikasi">
+                    <input type="submit" name="kirim-edit" class="btn act danger" value="Batalkan Verifikasi">
+                <?php }else{ ?>
+                    <input type="hidden" name="id_lahan" value="<?php echo $data['id_lahan'] ?>">
+                    <input type="hidden" name="status" value="Terverifikasi">
+                    <input type="submit" name="kirim-edit" class="btn act success" value="Verifikasi Iklan Ini">
+                <?php } ?>
+                <a href="fpdf/FieldPDF.php?id_lahan=<?php echo $data['id_lahan'] ?>" target="_blank" class="btn act warning" title="Kembali"><i class="fa fa-file-pdf-o"></i> Cetak Ke PDF</a>
+                <a href="userView.php?id_user=<?php echo $data['id_user'] ?>" class="btn act info" title="Lihat Pengiklan"><i class="fa fa-eye"></i> Lihat Pengiklan</a>
         </td></tr>
         </form>
       </table>
-
-<?php include "template/footer.php"; ?>
+    <?php include "template/footer.php"; ?>
 </div>
 <script type="text/javascript" src="js/accordion.js"></script>
 </body>

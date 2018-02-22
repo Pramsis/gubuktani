@@ -67,8 +67,7 @@
           <tr>
             <th>Judul</th>
             <th>Alamat Lahan</th>
-            <th>Luas</th>
-            <th>Harga</th>
+            <th>Status</th>
             <th class="aksi">Aksi</th>
           </tr>
           <?php 
@@ -90,8 +89,7 @@
           <tr>
             <td><?php echo $field['judul']; ?></td>
             <td><?php echo $field['alamat_lahan']; ?></td>
-            <td><?php echo $field['luas']; ?> M<sup>2</sup></td>
-            <td><?php echo $field['harga']; ?></td>
+            <td><?php echo $field['status']; ?></td>
             <td class="aksi">
               <a href="fieldEdit.php?id_lahan=<?php echo $field['id_lahan']?>" class="btn info" title="perbarui iklan"><i class="fa fa-pencil"></i></a>
               <a href="fieldProses.php?id_lahan=<?php echo $field['id_lahan']; ?>" class="btn danger" title="hapus iklan"><i class="fa fa-trash"></i></a>
@@ -100,7 +98,7 @@
           <?php   } ?>
           <?php } ?>
           <tr>
-            <td colspan="5">
+            <td colspan="4">
               <a href="fieldAdd.php" class="btn success"><i class="fa fa-plus"></i> Tambah Lahan</a>
             </td>
           </tr>

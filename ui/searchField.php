@@ -28,13 +28,9 @@
   <h1>Sekarang Menyewa Lahan Pertanian Semakin Mudah Dan Cepat</h1>
   <h3>Ayo Daftarkan Sekarang Dan Iklankan Lahan Anda Secara Online</h3>
 </div>
-<form class="example" method="get">
-    <input type="text" placeholder="Ketik Judul Iklan" name="cari" required/>
-    <button type="submit"><i class="fa fa-search"></i></button>
-</form>
 <div class="content">
     <div class="view-data">
-    <h2><i class="fa fa-map-o"></i>&nbsp;Lahan Sewa Terbaik</h2>
+    <h2><i class="fa fa-tree"></i>&nbsp;Lahan Sewa Terbaik</h2>
     <?php
         
         if (isset($_GET['cari'])){
@@ -75,12 +71,13 @@
       ?>
     <div class="responsive">
       <div class="img">
+        <a class="btn <?php if($field['kondisi'] == "Tersedia"){echo "statsChange";}else{echo "statsChange2";}?>" style="width: 100%;"><?php echo $field['kondisi'] ?></a>
           <img src="images/<?php echo $field['foto_lahan'] ?>" style="min-width: 100%;min-height:200px;max-height: 200px; ">
         <div class="desc">
           <p><strong><?php echo $field['judul']?></strong></p>
-          <p><?php echo $field['kategori']; ?></p>
-          <p>Luas <?php echo $field['luas']; ?> M<sup>2</sup></p>
-          <p>Rp .<?php echo $field['harga']; ?> / <?php echo $field['kurun_sewa']; ?></p>
+          <p><i class="fa fa-tags"></i>&nbsp;<?php echo $field['kategori']; ?></p>
+          <p><i class="fa fa-arrows"></i>&nbsp;Luas <?php echo $field['luas']; ?> M<sup>2</sup></p>
+          <p><i class="fa fa-money"></i>&nbsp;Rp .<?php echo $field['harga']; ?> / <?php echo $field['kurun_sewa']; ?></p>
         </div>
         <a href="fieldDetail.php?id_lahan=<?php echo $field['id_lahan'] ?>" class="btn info" style="width: 100%;">Lihat Selengkapnya</a>
       </div>
