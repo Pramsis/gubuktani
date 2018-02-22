@@ -38,10 +38,28 @@
   <h1>Profil <?php echo $currentUser['nama_depan'] ?></h1>
   <div class="container-akun">
     <img src="images/<?php echo $data['foto'] ?>" alt="Avatar" style="width:150px; height:150px;">
-    <p><span><?php echo $data['nama_depan'] . '&nbsp;' . $data['nama_belakang']?></span> <?php echo $data['email'] ?> . <?php echo $data['telepon'] ?></p>
-    <p><?php echo $data['alamat'] ?> . <?php echo $data['profesi'] ?></p>
-    <p></p>
-    <a href="akunEdit.php?id_user=<?php echo $currentUser['id_user'] ?>" class="btn info">Sunting Profil</a>
+    <div class="akun-isi" >
+     <table class="tbakun" border="0">
+      <tr>
+        <th class="tbakunhead">Nama Lengkap</th><th>: <?php echo $data['nama_depan'] . '&nbsp;' . $data['nama_belakang'] ?></th>
+      </tr>
+      <tr>
+        <th>Email </th><th>: <?php echo $data['email'] ?></th>
+      </tr>
+      <tr>
+        <th>Alamat </th><th>: <?php echo $data['alamat'] ?></th>
+      </tr>
+      <tr>
+        <th>Telepon </th><th>: <?php echo $data['telepon'] ?></th>
+      </tr>
+      <tr>
+        <th>Profesi </th><th>: <?php echo $data['profesi'] ?></th>
+      </tr>
+      <tr>
+        <th colspan="2"><a href="akunEdit.php?id_user=<?php echo $currentUser['id_user'] ?>" class="btn info">Sunting Profil</a></th>
+      </tr>
+    </table>
+    </div>
   </div>
   <div id="myModal" class="modal">
       <div class="modal-content">
@@ -68,6 +86,7 @@
             <th>Judul</th>
             <th>Alamat Lahan</th>
             <th>Status</th>
+            <th>Kondisi</th>
             <th class="aksi">Aksi</th>
           </tr>
           <?php 
@@ -90,15 +109,17 @@
             <td><?php echo $field['judul']; ?></td>
             <td><?php echo $field['alamat_lahan']; ?></td>
             <td><?php echo $field['status']; ?></td>
+            <td><?php echo $field['kondisi']; ?></td>
             <td class="aksi">
               <a href="fieldEdit.php?id_lahan=<?php echo $field['id_lahan']?>" class="btn info" title="perbarui iklan"><i class="fa fa-pencil"></i></a>
+              <a href="fieldDetail.php?id_lahan=<?php echo $field['id_lahan']?>" class="btn default" title="lihat iklan"><i class="fa fa-eye"></i></a>
               <a href="fieldProses.php?id_lahan=<?php echo $field['id_lahan']; ?>" class="btn danger" title="hapus iklan"><i class="fa fa-trash"></i></a>
             </td>
           </tr>
           <?php   } ?>
           <?php } ?>
           <tr>
-            <td colspan="4">
+            <td colspan="5">
               <a href="fieldAdd.php" class="btn success"><i class="fa fa-plus"></i> Tambah Lahan</a>
             </td>
           </tr>

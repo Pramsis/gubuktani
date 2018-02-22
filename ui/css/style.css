@@ -732,6 +732,16 @@ table .btn{
   padding: 10px;
 }
 
+.tbakun{
+  width: 83%;
+  float: right;
+  text-align: left;
+}
+
+.tbakunhead{
+  width: 17%;
+}
+
 .akun-table{
   border:2px solid #333;
 }
