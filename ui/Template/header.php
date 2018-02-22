@@ -26,6 +26,16 @@
         <?php }else{ ?>
           <a href='logout.php' style='float:right;'>Logout</a>
           <a href='akun.php?id_user=<?php echo $currentUser['id_user']; ?>' class="<?php if(($a == $b . $c[3]) || ($a == $b . $c[4]) || ($a == $b . $c[5])){echo $d;}?>" style='float:right; text-transform:capitalize;'>Akun <?php echo $currentUser['nama_depan'] ?></a>
+          <div class="dropdown">
+            <button class="dropbtn">Dropdown 
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+          </div> 
        <?php } ?>
   <div class="search-container">
     <form action="index.php" method="get">

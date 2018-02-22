@@ -42,7 +42,27 @@
     <p><?php echo $data['alamat'] ?> . <?php echo $data['profesi'] ?></p>
     <p></p>
     <a href="akunEdit.php?id_user=<?php echo $currentUser['id_user'] ?>" class="btn info">Sunting Profil</a>
+    <a id="myBtn" class="btn info" title="Foto Profil"><i class="fa fa-camera"></i></a>
+    <a href="akunEditPass.php?id_user=<?php echo $currentUser['id_user'] ?>" class="btn warning" title="Password"><i class="fa fa-lock"></i></a>
   </div>
+  <div id="myModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+          <h2>Ganti Foto Profil</h2>
+        </div>
+        <div class="modal-body">
+          <form method="post" action="UserAkun.php" id="regForm" enctype="multipart/form-data">
+            <input type="hidden" name="id_user" value="<?php echo $data['id_user'] ?>">
+            <input type="file" name="foto">
+            <button type="submit" name="ganti-foto">Ganti Foto Profil</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <h3>gubuktani.co.id</h3>
+        </div>
+      </div>
+    </div>
     <h1>Data Iklan Anda</h1>
     <div class="container-data">
         <table class="akun-table">

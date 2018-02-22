@@ -47,8 +47,6 @@
       <p><span><?php echo $data['nama_depan'] . '&nbsp;' . $data['nama_belakang']?></span> <?php echo $data['email'] ?> . <?php echo $data['telepon'] ?></p>
       <p><?php echo $data['alamat'] ?> . <?php echo $data['profesi'] ?></p>
       <p></p>
-      <a id="myBtn" class="btn info" title="Foto Profil"><i class="fa fa-camera"></i></a>
-      <a href="akunEditPass.php?id_user=<?php echo $currentUser['id_user'] ?>" class="btn warning" title="Password"><i class="fa fa-lock"></i></a>
     </div>
       
     <div id="myModal" class="modal">
