@@ -15,7 +15,7 @@
   $d = "active";
 ?>
 
-<div class="navbar" id="navbar">
+<div class="topnav" id="navbar">
   <a href="<?php echo $c[0] ?>" class="<?php if($a == $b . $c[0]){echo $d;}?>">Beranda</a>
   <a href="<?php echo $c[7] ?>" class="<?php if($a == $b . $c[7]){echo $d;}?>">Cari Lahan</a>
   <a href='fieldAdd.php' class="<?php if(($a == $b . $c[6])){echo $d;}?>"><i class='fa fa-pencil'></i> Pasang Iklan</a>
@@ -27,4 +27,10 @@
           <a href='logout.php' style='float:right;'>Logout</a>
           <a href='akun.php?id_user=<?php echo $currentUser['id_user']; ?>' class="<?php if(($a == $b . $c[3]) || ($a == $b . $c[4]) || ($a == $b . $c[5])){echo $d;}?>" style='float:right; text-transform:capitalize;'>Akun <?php echo $currentUser['nama_depan'] ?></a>
        <?php } ?>
+  <div class="search-container">
+    <form action="index.php" method="get">
+      <input type="text" placeholder="Ketik Judul Iklan" name="cari" required/>
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
 </div>

@@ -69,36 +69,66 @@ body,html {
 
 /*navbar*/
 
-.navbar {
+.topnav {
   overflow: hidden;
   background-color: #27ae60;
-  z-index: 5;
+  color: #fff;
 }
 
-.navbar a {
+.topnav a {
   float: left;
   display: block;
-  color: #f2f2f2;
   text-align: center;
-  padding: 20px;
+  padding: 20px 16px;
   text-decoration: none;
   font-size: 17px;
-}
-
-.navbar a:hover {
-  background-color: #2ecc71;
   color: #fff;
-  transition: 0.5s;
 }
 
-.navbar a.active {
+.topnav a:hover {
   background-color: #2ecc71;
-  color: white;
 }
 
-.navbar .icon {
-    display: none;
+.topnav a.active {
+  background-color: #2ecc71;
 }
+
+.topnav .search-container {
+ float: right;
+}
+
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 14px;
+  margin-right: 5px;
+  font-size: 17px;
+  border: none;
+  background: #2ecc71;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.topnav input[type=text]::-webkit-input-placeholder{
+  color: #fff;
+}
+
+.topnav .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 14px;
+  margin-right: 16px;
+  background: #2ecc71;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.topnav .search-container button:hover {
+  background: #ccc;
+}
+
 
 #brand{
   font-weight: bold;
@@ -168,49 +198,6 @@ body,html {
   background-size: cover;
   background-position: center;
 }
-
-/*search*/
-
-.example{
-  padding: 30px;
-  background: #2ecc71;
-}
-
-.example input[type=text] {
-    padding: 20px;
-    font-size: 17px;
-    border: none;
-    float: left;
-    width: 90%;
-    background: #f1f1f1;
-    border-radius: 2px;
-
-}
-
-.example button {
-    float: right;
-    width: 9%;
-    padding: 20px;
-    background: #27ae60;
-    color: white;
-    font-size: 17px;
-    border: none;
-    border-left: none;
-    cursor: pointer;
-    border-radius: 2px;
-}
-
-.example button:hover {
-    background: #24d770;
-    transition: 0.5s;
-}
-
-.example::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-
 
 
 /*view data lahan*/
