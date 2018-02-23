@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 22 Feb 2018 pada 05.48
+-- Generation Time: 23 Feb 2018 pada 15.12
 -- Versi Server: 10.1.19-MariaDB
 -- PHP Version: 5.6.28
 
@@ -67,8 +67,7 @@ CREATE TABLE `tb_feedback` (
 
 INSERT INTO `tb_feedback` (`id_feedback`, `nama`, `email`, `pesan`, `create_at`, `update_at`) VALUES
 (6, 'Wahyu Ananda', 'wahyu@gmail.com', 'Isinya Bagus Mas', '2018-01-31 23:25:10', NULL),
-(7, 'Wahyu Ananda', 'wahyu@gmail.com', 'okelah', '2018-01-31 23:31:38', NULL),
-(8, 'Dimas Pramudya Sumarsis', 'dimasrajawali76@gmail.com', '', '2018-02-06 22:29:35', NULL);
+(7, 'Wahyu Ananda', 'wahyu@gmail.com', 'okelah', '2018-01-31 23:31:38', NULL);
 
 -- --------------------------------------------------------
 
@@ -129,8 +128,9 @@ CREATE TABLE `tb_lahan` (
 
 INSERT INTO `tb_lahan` (`id_lahan`, `id_user`, `id_kategori`, `judul`, `alamat_lahan`, `luas`, `sertifikasi`, `deskripsi`, `harga`, `kurun_sewa`, `status`, `kondisi`, `fasilitas_irigasi`, `fasilitas_tanah`, `fasilitas_jalan`, `fasilitas_pemandangan`, `foto_lahan`, `fieldCreate_at`, `fieldUpdate_at`) VALUES
 (24, 41, 14, 'Disewakan Kebun Daerah Sulawesi Letak Strageris', 'Jl. Nasional Solo Jogja , Kab Magelang', '3000', 'SHM - Sertifikat Hak Milik', 'Sip', 20000000, 'Tahunan', 'Terverifikasi', 'Tersedia', 'Menggunakan Pompa Air', 'Liat', 'Melewati Jalan Setapak Sawah', 'Tidak Ada', '22022018074226sawah6.jpg', '2018-02-15 22:52:04', '2018-02-22 07:42:26'),
-(25, 44, 12, 'Sewakan Sawah Murah Surabaya Pusat Dijamin Profit', 'simo mulyo baru block 5b/26', '100', 'HGB - Hak Guna Bangunan', 'tanpa perantara', 350000, 'Tahunan', 'Terverifikasi', 'Tersedia', 'Menggunakan Pompa Air', 'Humus', 'Melewati Jalan Setapak Sawah', 'Terasering', '22022018090802sawah3.jpg', '2018-02-22 09:08:02', '2018-02-22 09:15:28'),
-(26, 44, 12, 'Disewakan Sawah Dengan Cepat Daerah Kedung Baruk', 'kedung baruk no 25', '1000', 'HGB - Hak Guna Bangunan', 'harga tanah miring', 15000, 'Tahunan', 'Terverifikasi', 'Tersewa', 'Langsung Dari Parit', 'Liat', 'Pinggir Jalan Raya', 'Latar Belakang Gunung', '22022018091019sawah1.jpg', '2018-02-22 09:10:19', '2018-02-22 09:45:23');
+(25, 44, 12, 'Sewakan Sawah Murah Surabaya Pusat Dijamin Profit', 'simo mulyo baru block 5b/26', '100', 'HGB - Hak Guna Bangunan', 'tanpa perantara', 350000, 'Tahunan', 'Terverifikasi', 'Tersedia', 'Menggunakan Pompa Air', 'Humus', 'Melewati Jalan Setapak Sawah', 'Terasering', '22022018090802sawah3.jpg', '2018-02-22 09:08:02', '2018-02-22 15:14:49'),
+(26, 44, 12, 'Disewakan Sawah Dengan Cepat Daerah Kedung Baruk', 'kedung baruk no 25', '1000', 'HGB - Hak Guna Bangunan', 'harga tanah miring', 2000000, 'Tahunan', 'Terverifikasi', 'Tersewa', 'Langsung Dari Parit', 'Liat', 'Pinggir Jalan Raya', 'Latar Belakang Gunung', '22022018091019sawah1.jpg', '2018-02-22 09:10:19', '2018-02-22 16:18:53'),
+(27, 45, 13, 'Butuh Kebuh ? Disewakan Segera Kebun Jeruk Dekat Gunung Lis', 'Desa SumberIjo Kecamatan Wates Kota Mojoagung', '2000', 'Lainnya (PPJB,Girik,Adat,dll)', 'Disewakan Gunung Cocok Untuk Wisata', 4000000, 'Tahunan', 'Terverifikasi', 'Tersedia', 'Melewati Saluran Kecil', 'Alluvial', 'Melewati Jalan Setapak Sawah', 'Latar Belakang Gunung', '22022018175920kebun4.jpg', '2018-02-22 17:59:20', '2018-02-22 20:21:11');
 
 -- --------------------------------------------------------
 
@@ -160,7 +160,8 @@ INSERT INTO `tb_user` (`id_user`, `nama_depan`, `nama_belakang`, `email`, `passw
 (41, 'Dimas', 'Pramudya Sumarsis', 'dimasrajawali76@gmail.com', '$2y$10$UoT2V8yP3B5FHEXji1LGh.xJpo670nAym1RvPMHZTo6TRYGSGcne2', 'Jl Manukan Rejo III 1C / 8', '085881824590', 'Wirausaha', '0602201816042624384249.jpg', '2018-02-06 16:04:26', '2018-02-06 19:51:10'),
 (42, 'ali', 'alino', 'alino@gamail.com', '$2y$10$n0eFnPyvmL2OwQ4e5y2z8.3uUTaYypZTjA4Nx49r4SaLMWxy4lkRW', 'jerman', '089727265', 'Pedagang', '06022018223215sawah1.jpg', '2018-02-06 22:32:15', NULL),
 (43, 'Andri', 'Roni', 'andri@gmail.com', '$2y$10$xRoO.HDzLWt9j7jncsn/7eoG5UrZ1m3XrQi7kiHWd8RirTz6hNgEK', 'Jl Uka Dekat Roni', '087312322456', 'Pegawai Negeri', '07022018112258dwi_yan.jpg', '2018-02-07 11:22:58', '2018-02-07 11:26:12'),
-(44, 'imron', 'rosyadi', 'rosyadi@gmail.com', '$2y$10$bY6.DhLaFQtPJHnxvmee8.vEyoxoF1qhI4Hc4d9A7ASiTUoCU9C6O', 'simo hilir', '0838265543214', 'Pegawai Negeri', '22022018090430re-nainggolan2.jpg', '2018-02-22 09:04:30', NULL);
+(44, 'imron', 'rosyadi', 'rosyadi@gmail.com', '$2y$10$bY6.DhLaFQtPJHnxvmee8.vEyoxoF1qhI4Hc4d9A7ASiTUoCU9C6O', 'simo hilir', '0838265543214', 'Pegawai Negeri', '22022018090430re-nainggolan2.jpg', '2018-02-22 09:04:30', NULL),
+(45, 'Hendra', 'Fachrur Rojjy', 'hendra123@gmail.com', '$2y$10$M.Ypd9cFLpurrpiGIG.BD.ABwneVRL.X1QtjyWMbhWIQ/kVIibWXi', 'Simorejo', '081675323445', 'Pegawai Negeri', '220220181656534.jpg', '2018-02-22 16:56:53', NULL);
 
 --
 -- Indexes for dumped tables
@@ -209,7 +210,7 @@ ALTER TABLE `tb_admin`
 -- AUTO_INCREMENT for table `tb_feedback`
 --
 ALTER TABLE `tb_feedback`
-  MODIFY `id_feedback` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_feedback` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `tb_kategori`
 --
@@ -219,12 +220,12 @@ ALTER TABLE `tb_kategori`
 -- AUTO_INCREMENT for table `tb_lahan`
 --
 ALTER TABLE `tb_lahan`
-  MODIFY `id_lahan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id_lahan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 --
 -- AUTO_INCREMENT for table `tb_user`
 --
 ALTER TABLE `tb_user`
-  MODIFY `id_user` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+  MODIFY `id_user` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
