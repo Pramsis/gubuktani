@@ -24,6 +24,9 @@
   <script type="text/javascript" href="js/responsiveNav.js"></script>
 </head>
 <body onscroll="myFunction()">
+  <div class="header">
+  <h1>Gubuktani.co.id</h1>
+</div>
 <?php include "template/header.php"; ?>
 <div class="content">
   <div class="formAdd">
@@ -61,8 +64,8 @@
         <p>Deskripsi</p>
         <textarea placeholder="Masukkan Deskripsi" onKeyUp='textCounter(this)' wrap='physical' rows='1' cols='60' oninput="this.className = ''" name="deskripsi" ></textarea>
         <p>Harga</p>
-        <input type="text" id="tanpa-rupiah" placeholder="Harga Pertahun" oninput="this.className = ''"  name="harga" >
-        <p>Kurun Sewa</p>
+        <input type="text" id="tanpa-rupiah" placeholder="Harga Pertahun" oninput="this.className = ''"  name="harga" 
+>        <p>Kurun Sewa</p>
           <select name="kurun_sewa" required/>
             <option value="">--Pilih Kurun Sewa--</option>
             <option>Bulanan</option>
@@ -114,3 +117,4 @@
 <script type="text/javascript" src="js/modal.js"></script>
 </body>
 </html>
+

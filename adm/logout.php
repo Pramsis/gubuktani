@@ -7,5 +7,5 @@
 
     $admin->logout();
 
-    echo "<script>alert('Anda Berhasil Keluar');window.location='../ui/index.php';</script>";
+    echo "<script>alert('Anda Berhasil Keluar');window.location='login.php';</script>";
  ?>

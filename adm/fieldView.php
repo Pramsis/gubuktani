@@ -40,7 +40,7 @@
 
 <div class="wrapper">
   <div class="content">
-    <h2><i class="fa fa-user fa-fw" aria-hidden="true"></i>Data Lahan <?php echo $data['nama_depan'] . "&nbsp;" . $data['nama_belakang']; ?></h2>
+    <h2><i class="fa fa-tree fa-fw" aria-hidden="true"></i>Data Lahan <?php echo $data['nama_depan'] . "&nbsp;" . $data['nama_belakang']; ?></h2>
       <table class="table-data">
         <tr><th class="data-column">Foto Lahan</th><td style="padding: 0px 0px;"><img src="../ui/images/<?php echo $data['foto_lahan'] ?>" width="100%" height="150px"></td></tr>
         <tr><th class="data-column">Judul</th><td><?php echo $data['judul']?></td></tr>

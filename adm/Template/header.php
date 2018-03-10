@@ -23,7 +23,7 @@
   <li><a href="<?php echo $c[1] ?>" class="<?php if($a == $b . $c[1]){echo $d;}?>"><i class="fa fa-lock fa-fw" aria-hidden="true"></i>&nbsp;Data Admin</a></li>
   <li><a href="<?php echo $c[2] ?>" class="<?php if($a == $b . $c[2]){echo $d;}?>"><i class="fa fa-user fa-fw" aria-hidden="true"></i>&nbsp;Data Pengguna</a></li>
   <li><a href="<?php echo $c[3] ?>" class="<?php if($a == $b . $c[3]){echo $d;}?>"><i class="fa fa-tag fa-fw" aria-hidden="true"></i>&nbsp;Data Kategori</a></li>
-  <li><a href="<?php echo $c[4] ?>" class="<?php if($a == $b . $c[4]){echo $d;}?>"><i class="fa fa-map fa-fw" aria-hidden="true"></i>&nbsp;Data Lahan Pemilik</a></li>
+  <li><a href="<?php echo $c[4] ?>" class="<?php if($a == $b . $c[4]){echo $d;}?>"><i class="fa fa-tree fa-fw" aria-hidden="true"></i>&nbsp;Data Lahan Pemilik</a></li>
   <li><a href="<?php echo $c[5] ?>" class="<?php if($a == $b . $c[5]){echo $d;}?>"><i class="fa fa-send fa-fw" aria-hidden="true"></i>&nbsp;Data Umpan Balik</a></li>
-   <li><a href="logout.php"><i class="fa fa-sign-out fa-fw" aria-hidden="true"></i>&nbsp;Logout</a></li>
+  <li><a href="logout.php" onclick="javascript: if(confirm('Yakin Mau Keluar?')) sendRequest('logout.php');"><i class="fa fa-sign-out fa-fw" aria-hidden="true"></i>&nbsp;Logout</a></li>
 </ul>

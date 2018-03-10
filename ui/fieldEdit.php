@@ -28,19 +28,24 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Gubuktani - Sewa Lahan Pertanian Kini Mudah Dan Cepat</title>
+  <title>Gubuktani - Sunting Iklan</title>
   <link rel="shortcut icon" type="image/png" href="img/favicon.ico"/>
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
   <script type="text/javascript" href="js/responsiveNav.js"></script>
 </head>
 <body onscroll="myFunction()">
+<div class="header">
+  <h1>Gubuktani.co.id</h1>
+</div>
 <?php include "template/header.php"; ?>
 <div class="content">
   <div class="formAdd">
     <form action="fieldProses.php" method="post" id="regForm" class="regForm" enctype="multipart/form-data">
       <h1><i class="fa fa-pencil"></i> Perbarui Iklan</h1>
-        <h3>Alamat Lengkap Lahan</h3>
+        <p>Gambar Lahan</p>
+          <a href="#" id="myBtn2" class="btn" style="width: 100%;color:#333;border:1px solid #aaaaaa;">Klik Untuk Ganti Foto</a>
+        <p>Alamat Lengkap Lahan</p>
         <input type="hidden" name="id_lahan" value="<?php echo $data['id_lahan'] ?>">
         <input type="hidden" name="id_user" value="<?php echo $currentUser['id_user'] ?>">
         <p>Kategori</p>
@@ -109,18 +114,16 @@
             <option>Terasering</option>
             <option>Latar Belakang Gunung</option>
           </select>
-        <h3>Kondisi</h3>
+        <p>Kondisi</p>
           <select name="kondisi">
             <option><?php echo $data['kondisi'] ?></option>
             <option>Tersedia</option>
             <option>Tersewa</option>
           </select>
-        <h3>Gambar Lahan</h3>
-        <a href="#" id="myBtn" class="btn default" style="width: 100%;border:2px solid #aaaaaa;">Ganti Foto</a>
         <p><input type="submit" name="kirim-edit" class="success" value="Kirim Data"></p>
     </form>
   </div>
-  <div id="myModal" class="modal">
+  <div id="myModal2" class="modal">
       <div class="modal-content">
         <div class="modal-header">
           <span class="close">&times;</span>

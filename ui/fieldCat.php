@@ -6,6 +6,16 @@
 
     $currentUser = $user->getUser();
 
+    if (isset($_GET['id_kategori'])) {
+      $id = $_GET['id_kategori'];
+
+      $catSql = "SELECT * FROM tb_kategori WHERE id_kategori=$id";
+      $catQuery = $db->prepare($catSql);
+      $catQuery->execute();
+
+      $catData = $catQuery->fetch();
+    }
+
  ?>
 
 <!DOCTYPE html>
@@ -13,9 +23,9 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Gubuktani - Sewa Lahan Pertanian Kini Mudah Dan Cepat</title>
+  <title>Gubuktani - Sewa Lahan Pertanian Kini Mudah Dan Cepat</title>
   <link rel="shortcut icon" type="image/png" href="img/favicon.ico"/>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
   <script type="text/javascript" href="js/responsiveNav.js"></script>
 </head>
@@ -29,26 +39,19 @@
   <h3>Ayo Daftarkan Sekarang Dan Iklankan Lahan Anda Secara Online</h3>
 </div>
 <div class="content">
-  <div class="view-data">
-    <h2><i class="fa fa-tree"></i>&nbsp;Lahan Sewa Terbaik</h2>
+    <div class="view-data">
+    <h2><i class="fa fa-tags"></i>&nbsp;Menampilkan Lahan Dari Kategori <?php echo $catData['kategori']; ?></h2>
     <?php
+
+        
         
         if (isset($_GET['cari'])){
             $cari = $_GET['cari'];
-            $sql = "SELECT * FROM tb_lahan INNER JOIN tb_kategori ON tb_lahan.id_kategori=tb_kategori.id_kategori WHERE status = 'Terverifikasi' AND  judul LIKE '%".$cari."%'";
+            $sql = "SELECT * FROM tb_lahan INNER JOIN tb_kategori ON tb_lahan.id_kategori=tb_kategori.id_kategori WHERE status = 'Terverifikasi' AND judul LIKE '%".$cari."%'";
             $query = $db->prepare($sql);
             $query->execute();
 
             $data = $query->fetchAll();
-
-            if ($query->rowCount() > 0) {
-              echo "<p style='text-align: center;'>" . "Hasil Pencarian Dari " . $cari . "</p>";
-            }else{
-              echo "<p style='text-align: center;'>" . "Hasil "  . $cari .  " Tidak Ada Dalam Judul" . "</p>";
-            }
-        
-            
-        
         }else{
 
           $limit = 9;
@@ -75,7 +78,9 @@
           $data = $showquery->fetchAll();
         }
 
-        foreach($data as $field): 
+          foreach($data as $field): 
+
+          if($field['id_kategori'] == $id):
       
       ?>
     <div class="responsive">
@@ -91,7 +96,12 @@
         <a href="fieldDetail.php?id_lahan=<?php echo $field['id_lahan'] ?>" class="btn info" style="width: 100%;">Lihat Selengkapnya</a>
       </div>
     </div>
-    <?php endforeach; ?>
+    <?php 
+
+        endif;
+      endforeach; 
+
+    ?>
     <div class="clearfix"></div>
     <center>
     <div class="pagination">
@@ -105,61 +115,15 @@
     ?>
     </div>
     </center>
-    <hr>
-    <div class="kategori">
-    <h2><i class="fa fa-tags"></i>&nbsp; Kategori</h2>
-    <?php
-      
-      $catSql = "SELECT * FROM tb_kategori";
-      $query = $db->prepare($catSql);
-      $query->execute();
-      $categorys = $query->fetchAll();
-      
-      foreach($categorys as $category): 
-    
-    ?>
-    <a href="fieldCat.php?id_kategori=<?php echo $category['id_kategori']?>" class="default" style="padding: 20px;"><?php echo $category['kategori'] ?></a>
-    <?php endforeach; ?>
-  </div> 
-    <hr>
-    <div class="Whyrow">
-      <h2><i class="fa fa-thumbs-o-up"></i>&nbsp; Alasan Memilih Gubuktani.co.id</h2>
-      <div class="Whycolumn">
-        <div class="Whycard">
-          <img src="img/1.jpg" style="width:100%; border-radius: 100%;">
-          <div class="WhyText">
-            <h2>Aman Dan Terpercaya</h2>
-            <p>Gubuktani.co.id menghargai dan menjamin keamanan dalam memilih lahan.</p>
-          </div>
-        </div>
-      </div>
-      <div class="Whycolumn">
-        <div class="Whycard">
-          <img src="img/2.jpg" alt="Jane" style="width:100%; border-radius: 100%;">
-          <div class="WhyText">
-            <h2>Mudah Dan Cepat</h2>
-            <p>Memberikan kemudahan pada anda dalam memilih lahan sewa dengan kriteria yang anda inginkan dan juga cepat dalam mengolah data yang ingin anda tampilkan.</p>
-          </div>
-        </div>
-      </div>
-      <div class="Whycolumn">
-        <div class="Whycard">
-          <img src="img/3.jpg" alt="Jane" style="width:100%; border-radius: 100%;">
-          <div class="WhyText">
-            <h2>Bersahabat</h2>
-            <p>Posting di Gubuktani.co.id 100% Gratis dan memberikan layanan prima bagi anda dalam mengiklankan lahan anda agar dikenal secara luas oleh masyarakat.</p>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 </div>
 <div class="clearfix"></div>
-<div class="content-2">
+<div class="content-2" style="margin-top: -100px;">
   <h3>Gubuktani.co.id - Website Sewa Lahan Terbaik Di Indonesia</h3>
   <p>Gubuktani menyajikan informasi sewa lahan, lengkap dengan fasilitas lahan, harga lahan, dan deskripsi lahan beserta foto lahan sawah yang disesuaikan dengan kondisi sebenarnya. info lahan kami akurat dan bermanfaat untuk penyewa lahan sawah. Saat ini kami memiliki lebih dari beberapa info lahan sawah dan masih terus bertambah di Indonesia. Data lahan sawah yang kami miliki telah mencakup beberapa provinsi besar seperti jawa timur, jawa tengah, jawa barat, hingga kalimantan dan Sumatra. Pengembangan data lahan sawah masih terus kami usahakan. Namun demikian, kamu dapat request penambahan info lahan sawah di seputar area yang kamu inginkan dengan mengisi data di <a href="contact.php" style="text-decoration: underline; color: #fff;">Umpan Balik Kami</a>. Kamu juga dapat menambahkan masukan, saran dan kritikan untuk Gubuktani di form tersebut. Dukungan kamu, akan mempercepat pengembangan data lahan yang kami miliki.</p>
-  <p>Jika kamu ingin mendapatkan inspirasi lahan yang sangat ciamik atau bisa cek lahan eksklusif yang ada di Gubuktani. Dengan luas ruangan yang hampir sama, kebanyakan Kamar kost eksklusif hanya diberikan lahan strategis atau keuntungan yang lebih menarik, ditambah pemandangan beserta kesejukan lahan tersebut sebagai tempat wisata yang menghasilkan, dengan tambahan . Di Gubuktani kini juga telah ditambahkan berbagai info lahan dengan harga murah ataupun beberapa tipe lahan lain sesuai masukan dari pengguna Gubuktani.</p>
+  <p>Jika kamu ingin mendapatkan inspirasi lahan yang sangat ciamik atau bisa cek lahan eksklusif yang ada di Mamikos. Dengan luas ruangan yang hampir sama, kebanyakan Kamar kost eksklusif hanya diberikan lahan strategis atau keuntungan yang lebih menarik, ditambah pemandangan beserta kesejukan lahan tersebut sebagai tempat wisata yang menghasilkan, dengan tambahan . Di Gubuktani kini juga telah ditambahkan berbagai info lahan dengan harga murah ataupun beberapa tipe lahan lain sesuai masukan dari pengguna Gubuktani.</p>
 </div>
+
 <?php include "template/footer.php"; ?>
 <script type="text/javascript" src="js/sticky.js"></script>
 <script type="text/javascript" src="js/tab.js"></script>

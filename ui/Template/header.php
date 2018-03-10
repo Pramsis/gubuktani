@@ -37,7 +37,7 @@
           </div> 
        <?php } ?>
   <div class="search-container">
-    <form action="index.php" method="get">
+    <form action="searchField.php" method="get">
       <input type="text" placeholder="Ketik Judul Iklan" name="cari" required/>
       <button type="submit"><i class="fa fa-search"></i></button>
     </form>

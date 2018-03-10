@@ -53,7 +53,7 @@
 
 <div class="wrapper">
   <div class="content">
-    <h2><i class="fa fa-map fa-fw" aria-hidden="true"></i>Data - Lahan Pemilik</h2>
+    <h2><i class="fa fa-tree fa-fw" aria-hidden="true"></i>Data - Lahan Pemilik</h2>
     <div style="overflow-x:auto;">
       <table id="myTable">
         <tr>

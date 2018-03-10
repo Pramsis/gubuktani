@@ -40,7 +40,7 @@ if(isset($_POST['kirim']))
 
         if ($user->login($email = $_POST['email'],$password = $_POST['password']))
         {
-            echo "<script>alert('Anda Berhasil Terdaftar');window.location='index.php';</script>";
+            echo "<script>alert('Anda Berhasil Terdaftar');window.location='fieldAdd.php';</script>";
         }
       }
       else
