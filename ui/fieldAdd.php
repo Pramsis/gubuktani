@@ -23,15 +23,14 @@
   <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
   <script type="text/javascript" href="js/responsiveNav.js"></script>
 </head>
-<body onscroll="myFunction()">
-  <div class="header">
-  <h1>Gubuktani.co.id</h1>
-</div>
+<body>
 <?php include "template/header.php"; ?>
+<div class="header">
+  <h1><i class="fa fa-pencil"></i> Pasang Iklan</h1>
+</div>
 <div class="content">
   <div class="formAdd">
     <form action="fieldProses.php" method="post" id="regForm" class="regForm" enctype="multipart/form-data">
-      <h1><i class="fa fa-pencil"></i> Pasang Iklan</h1>
         <h3>Alamat Lengkap Lahan *Wajib Di Isi</h3>
         <input type="hidden" name="id_user" value="<?php echo $currentUser['id_user'] ?>">
         <p>Kategori</p>

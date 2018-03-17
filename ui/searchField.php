@@ -19,12 +19,9 @@
   <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
   <script type="text/javascript" href="js/responsiveNav.js"></script>
 </head>
-<body onscroll="myFunction()">
-<div class="header">
-  <h1>Gubuktani.co.id</h1>
-</div>
+<body>
 <?php include "template/header.php"; ?>
-<div class="header-2">
+<div class="header">
   <h1>Sekarang Menyewa Lahan Pertanian Semakin Mudah Dan Cepat</h1>
   <h3>Ayo Daftarkan Sekarang Dan Iklankan Lahan Anda Secara Online</h3>
 </div>
@@ -114,7 +111,6 @@
 </div>
 
 <?php include "template/footer.php"; ?>
-<script type="text/javascript" src="js/sticky.js"></script>
 <script type="text/javascript" src="js/tab.js"></script>
 <script type="text/javascript" src="js/modal.js"></script>
 </body>

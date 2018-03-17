@@ -34,18 +34,16 @@
   <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
   <script type="text/javascript" href="js/responsiveNav.js"></script>
 </head>
-<body onscroll="myFunction()">
+<body>
 <div class="header">
-  <h1>Gubuktani.co.id</h1>
+  <h1><i class="fa fa-pencil"></i> Perbarui Iklan</h1>
 </div>
 <?php include "template/header.php"; ?>
 <div class="content">
   <div class="formAdd">
     <form action="fieldProses.php" method="post" id="regForm" class="regForm" enctype="multipart/form-data">
-      <h1><i class="fa fa-pencil"></i> Perbarui Iklan</h1>
         <p>Gambar Lahan</p>
           <a href="#" id="myBtn2" class="btn" style="width: 100%;color:#333;border:1px solid #aaaaaa;">Klik Untuk Ganti Foto</a>
-        <p>Alamat Lengkap Lahan</p>
         <input type="hidden" name="id_lahan" value="<?php echo $data['id_lahan'] ?>">
         <input type="hidden" name="id_user" value="<?php echo $currentUser['id_user'] ?>">
         <p>Kategori</p>
@@ -143,7 +141,6 @@
     </div>
 </div>
 <?php include "template/footer.php"; ?>
-<script type="text/javascript" src="js/sticky.js"></script>
 <script type="text/javascript" src="js/tabForm.js"></script>
 <script type="text/javascript" src="js/uploadPreview.js"></script>
 <script type="text/javascript" src="js/modal.js"></script>

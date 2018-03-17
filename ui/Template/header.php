@@ -16,7 +16,7 @@
 ?>
 
 <div class="topnav" id="navbar">
-  <a href="<?php echo $c[0] ?>" class="<?php if($a == $b . $c[0]){echo $d;}?>">Beranda</a>
+  <a href="<?php echo $c[0] ?>" class="<?php if($a == $b . $c[0]){echo $d;}?>"><b>Gubuktani.co.id</b></a>
   <a href="<?php echo $c[7] ?>" class="<?php if($a == $b . $c[7]){echo $d;}?>">Cari Lahan</a>
   <a href='fieldAdd.php' class="<?php if(($a == $b . $c[6])){echo $d;}?>"><i class='fa fa-pencil'></i> Pasang Iklan</a>
 

@@ -29,12 +29,9 @@
       }
     </style>
 </head>
-<body onscroll="myFunction()">
-<div class="header">
-  <h1>Gubuktani.co.id</h1>
-</div>
+<body>
 <?php include "template/header.php"; ?>
-<div class="header-2">
+<div class="header">
   <h1>Tim Kami</h1>
 </div>
 <div class="content" style="text-align: center;">
@@ -49,7 +46,6 @@
   <p><a href="http://instagram.com/pramsis.io" target="_blank"><i class="fa fa-instagram"></i>&nbsp; @pramsis.io </a> . <a href="http://facebook.com/pramsis.sangradjawali" target="_blank"><i class="fa fa-facebook-official"></i>&nbsp; Pramsis Pramudya</a> . <a href="http://twitter.com/@pramsisrajawali" target="_blank"><i class="fa fa-twitter"></i>&nbsp; @pramsisrajawali</a></p>
 </div>
 <?php include "template/footer.php"; ?>
-<script type="text/javascript" src="js/sticky.js"></script>
 <script type="text/javascript" src="js/tab.js"></script>
 <script type="text/javascript" src="js/modal.js"></script>
 </body>

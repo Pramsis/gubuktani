@@ -35,11 +35,11 @@
   <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
   <script type="text/javascript" href="js/responsiveNav.js"></script>
 </head>
-<body onscroll="myFunction()">
-<div class="header">
-  <h1>Gubuktani.co.id</h1>
-</div>
+<body>
 <?php include "template/header.php"; ?>
+<div class="header">
+  <h1>Sunting Profil</h1>
+</div>
 <div class="content content-akun">
   <h1>Profil <?php echo $currentUser['nama_depan'] ?></h1>
     <div class="container-akun">
@@ -76,7 +76,6 @@
     </div>
 </div>
 <?php include "template/footer.php"; ?>
-<script type="text/javascript" src="js/sticky.js"></script>
 <script type="text/javascript" src="js/modal.js"></script>
 </body>
 </html>

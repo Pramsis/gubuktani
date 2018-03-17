@@ -57,7 +57,8 @@
        </select>
        <input type="file" name="foto">
       <button type="submit" name="kirim">DAFTAR</button>
-    </form>
+      <p>Dengan Mengklik Daftar Ini Anda Telah Menyetujui<a href="term.php"> Kebijakan Privasi</a></p>
+    </form> 
     <p>Sudah Punya Akun?<a href="login.php"> Login Sekarang</a></p>
   </div>
 </div>
