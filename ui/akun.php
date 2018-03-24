@@ -80,7 +80,7 @@
       </div>
     </div>
     <h1>Data Iklan Anda</h1>
-    <div class="container-data">
+
         <table class="akun-table">
           <tr>
             <th>Judul</th>
@@ -124,7 +124,7 @@
             </td>
           </tr>
         </table>
-    </div>
+    
 </div>
 <?php include "template/footer.php"; ?>
 <script type="text/javascript" src="js/modal.js"></script>

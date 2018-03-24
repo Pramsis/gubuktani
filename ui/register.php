@@ -24,7 +24,7 @@
 </head>
 <body>
 <?php include "template/header.php"; ?>
-<div class="header header-login">
+<div class="header">
   <h1>Sekarang Menyewa Lahan Pertanian Semakin Mudah Dan Cepat</h1>
   <h3>Ayo Daftarkan Sekarang Dan Iklankan Lahan Anda Secara Online</h3>
 </div>
@@ -57,7 +57,7 @@
        </select>
        <input type="file" name="foto">
       <button type="submit" name="kirim">DAFTAR</button>
-      <p>Dengan Mengklik Daftar Ini Anda Telah Menyetujui<a href="term.php"> Kebijakan Privasi</a></p>
+      <p>Dengan Mengklik Daftar, Anda Telah Menyetujui<a href="term.php"> Kebijakan Privasi</a></p>
     </form> 
     <p>Sudah Punya Akun?<a href="login.php"> Login Sekarang</a></p>
   </div>

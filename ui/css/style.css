@@ -5,14 +5,8 @@ body,html {
   color: #333;
 }
 
-/*header*/
-.header-login h1{
-  font-family: arial;
-  margin-bottom: 30px;
-}
-
 .header{
-  background: url("../img/sawah2.jpg");
+  background: url("../img/sawah3.jpg");
   background-position: center;
   background-size: cover;
   color: #fff;
@@ -42,6 +36,8 @@ body,html {
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 5;
+  
 }
 
 .topnav a {
@@ -73,9 +69,7 @@ body,html {
   font-size: 17px;
   border: none;
   background: #fff;
-  border: 1px solid #fff;
   color: #333;
-  border-radius: 2px;
 }
 
 .topnav input[type=text]:focus {
@@ -91,18 +85,16 @@ body,html {
   padding: 6px 10px;
   margin-top: 14px;
   margin-right: 16px;
-  background: #2ecc71;
   font-size: 17px;
   border: none;
   cursor: pointer;
-  border: 1px solid #fff;
   color: #fff;
-  border-radius: 2px;
+  background-color: #2196F3;
 }
 
 .topnav .search-container button:hover {
-  background: #fff;
-  color: #2ecc71;
+  background: #0b7dda;
+  color: #fff;
   transition: 0.5s; 
 }
 
@@ -160,10 +152,6 @@ body,html {
 }
 
 
-#brand{
-  font-weight: bold;
-}
-
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 600px) {
   .navbar a:not(:first-child) {display: none;}
@@ -192,11 +180,13 @@ body,html {
     width: 900px;
     margin: 50px auto;
     text-align: center;
+
 }
 
 .kategori a{
     display: inline-table;
     margin: 7px;
+
 }
 
 @media screen and (max-width: 600px) {
@@ -233,7 +223,8 @@ body,html {
 /*view data lahan*/
 
 div.img {
-  border: 2px solid #aaa;
+  /*box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);*/
+  background: #f2f2f2;
 }
 
 div.img img {
@@ -353,168 +344,7 @@ hr{
   margin-top: 20px;
 }
 
-#regForm button:hover {
-  opacity: 0.8;
-}
 
-#prevBtn {
-  background-color: #bbbbbb;
-}
-
-/* Make circles that indicate the steps of the form: */
-.step {
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #333;
-  border: none;
-  border-radius: 50%;
-  display: inline-block;
-  opacity: 0.5;
-}
-
-.step.active {
-  opacity: 1;
-}
-
-/* Mark the steps that are finished and valid: */
-.step.finish {
-  background-color: #000;
-}
-
-/*checkbox*/
-
-.checkbox {
-    display: block;
-    position: relative;
-    padding-left: 35px;
-    margin-bottom: 12px;
-    cursor: pointer;
-    font-size: 22px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    float: left;
-    margin-right: 20px;
-}
-
-/* Hide the browser's default checkbox */
-.checkbox input {
-    position: absolute;
-    opacity: 0;
-}
-
-/* Create a custom checkbox */
-.checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: #eee;
-}
-
-/* On mouse-over, add a grey background color */
-.checkbox:hover input ~ .checkmark {
-    background-color: #ccc;
-}
-
-/* When the checkbox is checked, add a blue background */
-.checkbox input:checked ~ .checkmark {
-    background-color: #2ecc71;
-}
-
-/* Create the checkmark/indicator (hidden when not checked) */
-.checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-}
-
-/* Show the checkmark when checked */
-.checkbox input:checked ~ .checkmark:after {
-    display: block;
-}
-
-/* Style the checkmark/indicator */
-.checkbox .checkmark:after {
-    left: 9px;
-    top: 5px;
-    width: 5px;
-    height: 10px;
-    border: solid white;
-    border-width: 0 3px 3px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-}
-
-/*radio button*/
-
-.radio {
-    display: block;
-    position: relative;
-    padding-left: 35px;
-    margin-bottom: 12px;
-    cursor: pointer;
-    font-size: 22px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    float: left;
-    margin-right: 20px;
-}
-
-/* Hide the browser's default radio button */
-.radio input {
-    position: absolute;
-    opacity: 0;
-}
-
-/* Create a custom radio button */
-.checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: #eee;
-    border-radius: 50%;
-}
-
-/* On mouse-over, add a grey background color */
-.radio:hover input ~ .checkmark {
-    background-color: #ccc;
-}
-
-/* When the radio button is checked, add a blue background */
-.radio input:checked ~ .checkmark {
-    background-color: #2ecc71;
-}
-
-/* Create the indicator (the dot/circle - hidden when not checked) */
-.checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-}
-
-/* Show the indicator (dot/circle) when checked */
-.radio input:checked ~ .checkmark:after {
-    display: block;
-}
-
-/* Style the indicator (dot/circle) */
-.radio .checkmark:after {
-  top: 9px;
-  left: 9px;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: white;
-}
 
 /*data akun dan lahan*/
 
@@ -690,6 +520,9 @@ hr{
 table {
     width: 100%;
     text-align: center;
+    border-collapse: collapse;
+    border:none;
+
 }
 
 th, td {
@@ -715,15 +548,19 @@ table .btn{
 }
 
 .akun-table{
-  border:2px solid #333;
+   border-left: 10px solid #2ecc71;
+   background: #eee;
+
 }
 
 .akun-table th{
-  background: #2ecc71;
+  background-color: #333;
+  color:#fff;
+  padding: 20px;
 }
 
-.akun-table th,.akun-table td{
-  border:2px solid #333; 
+.akun-table td{
+  padding: 20px;
 }
 
 /*modal*/
@@ -839,6 +676,15 @@ a{
   text-decoration: none;
 }
 
+a.sosmedLink{
+  color: #333;
+}
+
+a.sosmedLink:hover{
+  color: #aaa;
+  transition: 0.5s;
+}
+
 .btn {
     border: none;
     color: white;
@@ -869,40 +715,6 @@ a{
 .default {background-color: #e7e7e7; color: black;} /* Gray */
 .default:hover {background: #ddd;}
 
-/*label area*/
-
-.label {
-    color: white;
-    padding: 8px;
-    font-family: Arial;
-}
-.success {background-color: #4CAF50;} /* Green */
-.info {background-color: #2196F3;} /* Blue */
-.warning {background-color: #ff9800;} /* Orange */
-.danger {background-color: #f44336;} /* Red */
-.other {background-color: #e7e7e7; color: black;} /* Gray */
-
-
-/*upload foto*/
-
-/*button upload foto*/
-/*
-
-.upload-data-foto {
-  position: relative;
-  overflow: hidden;
-  display: inline-block;
-  margin-bottom: 20px;
-}
-
-.upload-data-foto input[type=file] {
-  font-size: 100px;
-  position: absolute;
-  left: 0;
-  top: 0;
-  opacity: 0;
-}
-*/
 /*pagination*/
 .pagination {
     display: inline-block;
@@ -949,7 +761,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 .form {
     position: relative;
-    z-index: 1;
+    z-index: 0;
     background: none;
     max-width: 60%;
     margin: -100px auto 100px;
@@ -999,6 +811,7 @@ input[type=number]::-webkit-outer-spin-button {
     font-size: 14px;
     color: #333;
     resize: vertical;
+
 }
 
 .form textarea{
@@ -1122,7 +935,6 @@ input[type=number]::-webkit-outer-spin-button {
   padding: 20px 30px;
   color: #fff;
   font-weight: bold;
-  box-shadow: 4px 0px 0px 0px rgba(0, 0, 0, 0.2), 20px 0px 0px 0px rgba(0, 0, 0, 0.19);
 }
 
 .footer ul {

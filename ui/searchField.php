@@ -42,7 +42,7 @@
             if ($query->rowCount() > 0) {
               echo "<p style='text-align: center;'>" . "Hasil Pencarian Dari " . $cari . "</p>";
             }else{
-              echo "<p style='text-align: center;'>" . "Hasil "  . $cari .  " Tidak Ada Dalam Judul" . "</p>";
+              echo "<p style='text-align: center;'>" . "Maaf Hasil "  . $cari .  " Tidak Ada Dalam Judul" . "</p>";
             }
 
         }else{
@@ -82,7 +82,7 @@
           <p><strong><?php echo $field['judul']?></strong></p>
           <p><i class="fa fa-tags"></i>&nbsp;<?php echo $field['kategori']; ?></p>
           <p><i class="fa fa-arrows"></i>&nbsp;Luas <?php echo $field['luas']; ?> M<sup>2</sup></p>
-          <p><i class="fa fa-money"></i>&nbsp;Rp .<?php echo $field['harga']; ?> / <?php echo $field['kurun_sewa']; ?></p>
+          <p><i class="fa fa-money"></i>&nbsp;Rp. <?php echo number_format($field['harga'], 0, ',', '.'); ?> / <?php echo $field['kurun_sewa']; ?></p>
         </div>
         <a href="fieldDetail.php?id_lahan=<?php echo $field['id_lahan'] ?>" class="btn info" style="width: 100%;">Lihat Selengkapnya</a>
       </div>
@@ -107,7 +107,7 @@
 <div class="content-2" style="margin-top: -100px;">
   <h3>Gubuktani.co.id - Website Sewa Lahan Terbaik Di Indonesia</h3>
   <p>Gubuktani menyajikan informasi sewa lahan, lengkap dengan fasilitas lahan, harga lahan, dan deskripsi lahan beserta foto lahan sawah yang disesuaikan dengan kondisi sebenarnya. info lahan kami akurat dan bermanfaat untuk penyewa lahan sawah. Saat ini kami memiliki lebih dari beberapa info lahan sawah dan masih terus bertambah di Indonesia. Data lahan sawah yang kami miliki telah mencakup beberapa provinsi besar seperti jawa timur, jawa tengah, jawa barat, hingga kalimantan dan Sumatra. Pengembangan data lahan sawah masih terus kami usahakan. Namun demikian, kamu dapat request penambahan info lahan sawah di seputar area yang kamu inginkan dengan mengisi data di <a href="contact.php" style="text-decoration: underline; color: #fff;">Umpan Balik Kami</a>. Kamu juga dapat menambahkan masukan, saran dan kritikan untuk Gubuktani di form tersebut. Dukungan kamu, akan mempercepat pengembangan data lahan yang kami miliki.</p>
-  <p>Jika kamu ingin mendapatkan inspirasi lahan yang sangat ciamik atau bisa cek lahan eksklusif yang ada di Gubuktani. Dengan luas ruangan yang hampir sama, kebanyakan Kamar kost eksklusif hanya diberikan lahan strategis atau keuntungan yang lebih menarik, ditambah pemandangan beserta kesejukan lahan tersebut sebagai tempat wisata yang menghasilkan, dengan tambahan . Di Gubuktani kini juga telah ditambahkan berbagai info lahan dengan harga murah ataupun beberapa tipe lahan lain sesuai masukan dari pengguna Gubuktani.</p>
+  <p>Jika kamu ingin mendapatkan inspirasi lahan yang sangat ciamik atau bisa cek lahan eksklusif yang ada di Gubuktani. Dengan luas lahan yang relatif, kebanyakan lahan eksklusif hanya diberikan lahan strategis atau keuntungan yang lebih menarik, ditambah pemandangan beserta kesejukan lahan tersebut sebagai tempat wisata yang menghasilkan, dengan tambahan . Di Gubuktani kini juga telah ditambahkan berbagai info lahan dengan harga murah ataupun beberapa tipe lahan lain sesuai masukan dari pengguna Gubuktani.</p>
 </div>
 
 <?php include "template/footer.php"; ?>

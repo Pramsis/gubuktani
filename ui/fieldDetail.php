@@ -46,7 +46,7 @@
       <p><strong>Deskripsi</strong></p>
       <p><?php echo nl2br($data['deskripsi']); ?></p>
       <p><strong>Harga</strong></p>
-      <p>Rp .<?php echo $data['harga']; ?> / <?php echo $data['kurun_sewa']; ?></p>
+      <p>Rp. <?php echo number_format($data['harga'], 0, ',', '.'); ?> / <?php echo $data['kurun_sewa']; ?></p>
       <p><strong>Status Verifikasi</strong></p>
       <p><?php echo $data['status']; ?></p>
       <p><strong>Kondisi</strong></p>

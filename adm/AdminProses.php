@@ -100,7 +100,8 @@ if(isset($_POST['kirim'])){
                 $sql = "UPDATE tb_admin SET password=:password,update_at=:update_at WHERE id_admin=:id_admin";
                 $statement = $db->prepare($sql);
                 $statement->execute($params);
-                echo "<script>alert('Berhasil Ganti Password');window.location='adminData.php?page=pengaturan';</script>";
+
+                echo "<script>alert('Berhasil Ganti Password');window.location='adminData.php';</script>";
 
             }
 

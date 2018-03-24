@@ -41,6 +41,9 @@
 <?php include "template/header.php"; ?>
 <div class="content">
   <div class="formAdd">
+    <!-- <div style="text-align: center;">
+      <img src="images/<?php echo $data['foto_lahan'] ?>" width="50%">
+    </div> -->
     <form action="fieldProses.php" method="post" id="regForm" class="regForm" enctype="multipart/form-data">
         <p>Gambar Lahan</p>
           <a href="#" id="myBtn2" class="btn" style="width: 100%;color:#333;border:1px solid #aaaaaa;">Klik Untuk Ganti Foto</a>
@@ -124,7 +127,7 @@
   <div id="myModal2" class="modal">
       <div class="modal-content">
         <div class="modal-header">
-          <span class="close">&times;</span>
+          <span class="close2">&times;</span>
           <h2>Ganti Foto Lahan</h2>
         </div>
         <div class="modal-body">

@@ -25,7 +25,6 @@
   <h1>Kebijakan Privasi</h1>
 </div>
 <div class="content">
-  <h2>Kebijakan Privasi</h2>
   <p>Pada dasarnya, kami sangat menjaga privasi pengguna Gubuktani.co.id baik Anda sebagai pencari Lahan Sewa maupun pemilik lahan. Dalam halaman ini kami akan menjelaskan semua informasi terkait privasi dan bagaimana data pengguna kami simpan dan kelola di Gubuktani.co.id.</p>
 
   <p><strong>Data User</strong></p>
@@ -33,7 +32,7 @@
   <p>User dalam hal ini termasuk di antaranya pencari lahan sewa dan pemilik lahan.
   Adapun data user kami simpan secara aman di pusat data Gubuktani.co.id.
   Dalam hal ini Gubuktani.co.id melindungi privasi user dan tidak akan memberikan data user Gubuktani.co.id kepada pihak ketiga tanpa melalui persetujuan user tersebut.
-  Data Pengunjung Situs Gubuktani.co.id dan Aplikasi Gubuktani.co.id</p>
+  Data Pengunjung Situs Gubuktani.co.id</p>
 
   <p><strong>Mengisi Form Iklan</strong></p>
 

@@ -48,7 +48,7 @@
       <div class="modal-body">
         <span class="close">&times;</span>
         <form method="post" action="UserAkun.php" id="regForm" enctype="multipart/form-data">
-          <input type="hidden" name="id_user" value="<?php echo $data['id_user'] ?>">
+          <input type="hidden" name="id_user" value="<?php echo $currentUser['id_user']; ?>">
           <input type="file" name="foto">
           <button type="submit" name="ganti-foto">Ganti Foto Profil</button>
         </form>

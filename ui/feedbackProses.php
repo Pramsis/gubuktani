@@ -25,7 +25,7 @@ if(isset($_POST['kirim']))
         $stmt= $db->prepare($sql);
         $stmt->execute($params);
 
-        echo "<script>alert('Pesan Anda Sudah Masuk');window.location='index.php';</script>";
+        echo "<script>alert('Pesan Anda Sudah Masuk Terima Kasih :)');window.location='index.php';</script>";
       
     }
     catch(PDOException $e)

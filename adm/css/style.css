@@ -4,6 +4,10 @@ body {
     color: #777;
 }
 
+a{
+    text-decoration: none;
+}
+
 .body-login{
     background: url("../img/white.jpg");
     background-size: cover;
@@ -205,7 +209,6 @@ div.content {
 /*table area*/
 
 table, td, th {
-    border: 1px solid #ddd;
     text-align: center;
 }
 
@@ -233,6 +236,10 @@ th{
 
 th, td {
     padding: 10px;
+}
+
+td{
+    background: #eee;
 }
 
 .action-column{
@@ -523,6 +530,12 @@ input[type=number]::-webkit-outer-spin-button {
 .default {background-color: #e7e7e7; color: black;} /* Gray */
 .default:hover {background: #ddd;}
 
+.flatBlack{background: #333;}
+.flatBlack:hover{background: #111;}
+
+.alizarin {background: #e74c3c;}
+.emerland {background: #2ecc71;}
+.sunflower {background: #f1c40f;}
 /*Pagination area*/
 
 .center {
@@ -586,9 +599,8 @@ input[type=number]::-webkit-outer-spin-button {
 
 /* Style the container with a rounded border, grey background and some padding and margin */
 .landing {
-    background-color: #2ecc71;
     padding: 16px;
-    margin: 16px 0;
+    margin: 16px 0px;
     color: #fff;
 }
 
@@ -599,17 +611,14 @@ input[type=number]::-webkit-outer-spin-button {
     display: table;
 }
 
-/* Float images inside the container to the left. Add a right margin, and style the image as a circle */
-.landing img {
-    float: left;
-    margin-right: 20px;
-    border-radius: 50%;
+.landingRight{
+    float: right;
+    width:49.5%;
 }
 
-/* Increase the font-size of a span element */
-.landing span {
-    font-size: 20px;
-    margin-right: 15px;
+.landingLeft{
+    float: left;
+    width:49.5%;
 }
 
 /* Add media queries for responsiveness. This will landing both the text and the image inside the container */
@@ -623,4 +632,4 @@ input[type=number]::-webkit-outer-spin-button {
     float: none;
     display: block;
   }
-}
+}   

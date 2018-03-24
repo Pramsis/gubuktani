@@ -80,7 +80,8 @@ elseif(isset($_POST['kirim-edit']))
         $statement = $db->prepare($sql);
         $statement->execute($params);
 
-        header("location: akun.php");
+        echo "<script>alert('Profil Berhasil Di Sunting');window.location='akun.php';</script>";
+
     }
     catch(PDOException $e)
     {
@@ -168,6 +169,7 @@ elseif(isset($_POST["ganti-pass"]))
                 $sql = "UPDATE tb_user SET password=:password,update_at=:update_at WHERE id_user=:id_user";
                 $statement = $db->prepare($sql);
                 $statement->execute($params);
+                
                 echo "<script>alert('Berhasil Ganti Password');window.location='akun.php';</script>";
 
             }

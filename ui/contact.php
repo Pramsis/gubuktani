@@ -25,19 +25,19 @@
   <h1>Kontak Kami</h1>
 </div>
 <div class="content">
-  <h2>Kontak</h2>
+  <h2>Kontak Gubuktani.co.id</h2>
   <p>Jika anda merasa terbantu dengan website ini diharapkan sedianya mengirimkan kritik saran kepada kami
   selaku penyedia website gubuktani.co.id </p>
   <p>segala sesuatu yang berkaitan dengan website ini atau kesepakatan bisnis dengan kami anda bisa menghubungi kontak dibawah ini</p>
-  <table class="akun-table" style="text-align: left; margin-top:50px; color: #fff;" border="1">
+  <table class="akun-table" style="text-align: left; margin-top:50px; color: #fff;" border="0">
     <tr>
-      <th>Email </th><th>: support@gubuktani.co.id</th>
+      <th>Email </th><th>:  support@gubuktani.co.id</th>
     </tr>
     <tr>
       <th>Alamat </th><th>: Jl . Manukan Rejo III 1C / 8 , Manukan Kulon , Tandes , Surabaya Jawa Timur 60185</th>
     </tr>
     <tr>
-      <th>Telepon </th><th>: +6285 - 881 - 824 - 590</th>
+      <th>Telepon </th><th>:  +6285 - 881 - 824 - 590</th>
     </tr>
   </table>
   <h2 style="margin-top: 70px;">Peta Lokasi</h2>

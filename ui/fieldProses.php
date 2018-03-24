@@ -152,7 +152,7 @@ elseif(isset($_POST['kirim-edit']))
         $statement = $db->prepare($sql);
         $statement->execute($params);
 
-        echo "<script>alert('Berhasil Ganti Foto Lahan');window.location='akun.php';</script>";
+        echo "<script>alert('Berhasil Ganti Foto Lahan');window.location='fieldEdit.php?id_lahan=$data[id_lahan]';</script>";
 
         }
         catch(PDOException $e)

@@ -42,10 +42,26 @@
   <h1>Profil <?php echo $currentUser['nama_depan'] ?></h1>
     <div class="container-akun">
       <img src="images/<?php echo $data['foto'] ?>" alt="Avatar" style="width:150px; height:150px;">
-      <p><span><?php echo $data['nama_depan'] . '&nbsp;' . $data['nama_belakang']?></span> <?php echo $data['email'] ?> . <?php echo $data['telepon'] ?></p>
-      <p><?php echo $data['alamat'] ?> . <?php echo $data['profesi'] ?></p>
-      <p></p>
-      <a href="akunEdit.php?id_user=<?php echo $data['id_user'] ?>" class="btn success" title="Kembali"><i class="fa fa-arrow-left"></i>&nbsp; Kembali</a>
+      <table class="tbakun" border="0">
+      <tr>
+        <th class="tbakunhead">Nama Lengkap</th><th>: <?php echo $data['nama_depan'] . '&nbsp;' . $data['nama_belakang'] ?></th>
+      </tr>
+      <tr>
+        <th>Email </th><th>: <?php echo $data['email'] ?></th>
+      </tr>
+      <tr>
+        <th>Alamat </th><th>: <?php echo $data['alamat'] ?></th>
+      </tr>
+      <tr>
+        <th>Telepon </th><th>: <?php echo $data['telepon'] ?></th>
+      </tr>
+      <tr>
+        <th>Profesi </th><th>: <?php echo $data['profesi'] ?></th>
+      </tr>
+      <tr>
+        <th colspan="2"><a href="akunEdit.php?id_user=<?php echo $currentUser['id_user'] ?>" class="btn info">Sunting Profil</a></th>
+      </tr>
+    </table>
     </div>
     <div class="container-data">
       <form method="post" action="UserAkun.php" id="regForm">

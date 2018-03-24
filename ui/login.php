@@ -33,7 +33,7 @@
 </head>
 <body>
 <?php include "template/header.php"; ?>
-<div class="header header-login">
+<div class="header">
   <h1>Sekarang Menyewa Lahan Pertanian Semakin Mudah Dan Cepat</h1>
   <h3>Ayo Daftarkan Sekarang Dan Iklankan Lahan Anda Secara Online</h3>
 </div>

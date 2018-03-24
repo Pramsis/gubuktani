@@ -41,7 +41,6 @@
             <h1>Login</h1>
             <?php if (isset($error)): ?>
             <div class="alert">
-                  <span class="closebtn">&times;</span>
             <?php echo $error ?>
             </div>
             <?php endif; ?>
@@ -49,7 +48,7 @@
               <input type="text" name="username" placeholder="Username" required/>
               <input type="password" name="password" placeholder="password" required/>
               <button type="submit" name="kirim">LOGIN</button>
-              <p class="message">Example Admin Panel @ 2017</p>
+              <p class="message">Example Sidenav Admin Panel @ 2018</p>
             </form>
           </div>
         </div>

@@ -75,7 +75,11 @@
             }
           }
           ?>
-          <tr><td colspan=2><a href="userData.php" class="btn act info" title="Kembali"><i class="fa fa-arrow-left"></i> Kembali</a></td></tr>
+          <tr>
+            <td colspan=2>
+              <a href="userData.php" class="btn act info" title="Kembali"><i class="fa fa-arrow-left"></i>Kembali</a>
+            </td>
+          </tr>
       </table>
 
 

@@ -11,7 +11,7 @@
 
     $currentAdmin = $admin->getAdmin();
 
-    $limit = 5;
+    $limit = 3;
     $sql = "SELECT * FROM tb_feedback";
     $query = $db->prepare($sql);
     $query->execute();

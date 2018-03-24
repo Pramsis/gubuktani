@@ -30,7 +30,7 @@
       }
 
       $starting_limit = ($page-1)*$limit;
-      $show = "SELECT * FROM tb_admin  LIMIT $starting_limit , $limit";
+      $show = "SELECT * FROM tb_admin LIMIT $starting_limit , $limit";
       $showquery = $db->prepare($show);
       $showquery->execute();
 

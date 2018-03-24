@@ -13,11 +13,23 @@
 
     date_default_timezone_set("Asia/Jakarta");
 
-    $sql = "SELECT * FROM tb_lahan INNER JOIN tb_kategori ON tb_lahan.id_kategori=tb_kategori.id_kategori WHERE status = 'Belum Terverifikasi' ORDER BY fieldCreate_at ASC";
+    $sql = "SELECT * FROM tb_lahan WHERE status = 'Belum Terverifikasi'";
     $query = $db->prepare($sql);
     $query->execute();
 
     $data = $query->rowCount();
+
+    $UserSql = "SELECT * FROM tb_user";
+    $UserQuery = $db->prepare($UserSql);
+    $UserQuery->execute();
+
+    $UserData = $UserQuery->rowCount();
+
+    $feedSql = "SELECT * FROM tb_feedback";
+    $feedQuery = $db->prepare($feedSql);
+    $feedQuery->execute();
+
+    $feedData = $feedQuery->rowCount();
 
  ?>
 
@@ -33,22 +45,72 @@
 </head>
 <body>
 
-<?php include "template/header.php"; ?>
+<?php 
+
+  include "template/header.php"; 
+
+  if(date('l') == "Sunday")
+  {
+    $hari = "Minggu";
+  }
+  elseif(date('l') == "Monday")
+  {
+    $hari = "Senin";
+  }
+  elseif(date('l') == "Tuesday")
+  {
+    $hari = "Selasa";
+  }
+  elseif(date('l') == "Wednesday")
+  {
+    $hari = "Rabu";
+  }
+  elseif(date('l') == "Thursday")
+  {
+    $hari = "Kamis";
+  }
+  elseif(date('l') == "Friday")
+  {
+    $hari = "Jumat";
+  }
+  elseif(date('l') == "Saturday")
+  {
+    $hari = "Sabtu";
+  }
+  else
+  {
+    echo "hari salah";
+  }
+
+?>
 
 <div class="wrapper">
   <div class="content">
-    <h2>Halaman Beranda</h2>
-    <div class="landing">
-      <h2>Selamat Datang! Admin <?php echo $currentAdmin['nama'] ?></h2>
+    <h2><i class="fa fa-home fa-fw" aria-hidden="true"></i>Halaman Beranda</h2>
+
+    <div class="landing emerland">
+      <h2>Selamat Datang! Admin <?php echo $currentAdmin['nama'] ?> | Hari Ini <?php echo $hari; ?> Tanggal <?php echo date('d/m/Y'); ?></h2>
     </div>
   
-    <div class="landing">
-      <h2>Hari Ini <?php echo date('l') ?> Tanggal <?php echo date('h/m/Y'); ?></h2>
-    </div>
 
-    <div class="landing">
-      <h2>Jumlah Lahan Belum Terverifikasi <?php echo $data; ?></h2>
-    </div>    
+    <a href="fieldData.php">
+      <div class="landing danger">
+        <h2>Jumlah Lahan Belum Terverifikasi <?php echo $data; ?></h2>
+      </div>
+    </a>
+
+    <a href="userData.php">
+      <div class="landing info">
+        <h2>Total Pengguna Saat Ini <?php echo $UserData; ?> Orang</h2>
+      </div> 
+    <a>
+
+    <a href="feedbackData.php">
+      <div class="landing flatBlack" >
+        <h2>Kiriman Umpan Balik <?php echo $feedData; ?> Pesan</h2>
+      </div> 
+    </a>
+
   </div>
 
 <?php include "template/footer.php"; ?>
