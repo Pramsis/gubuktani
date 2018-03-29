@@ -75,6 +75,7 @@
           </div>
         <p>Ulangi Password Lama</p>
         <input type="password" name="password_conf" placeholder="Ulangi Password Baru">
+        <p><strong><i>*Jaga Kerahasiaan Password Anda</i></strong></p>
         <button type="submit" name="ganti-pass">Perbarui Data</button>
       </form>
     </div>

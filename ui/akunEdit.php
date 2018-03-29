@@ -61,6 +61,9 @@
       <tr>
         <th>Profesi </th><th>: <?php echo $data['profesi'] ?></th>
       </tr>
+      <tr>
+        <th colspan="2"><a href="akun.php?id_user=<?php echo $currentUser['id_user'] ?>" class="btn success">Kembali Ke Profil</a></th>
+      </tr>
     </table>
     </div>
   </div>

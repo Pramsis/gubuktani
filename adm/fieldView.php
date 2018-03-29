@@ -48,7 +48,7 @@
         <tr><th>Kontak Pemilik</th><td><?php echo $data['telepon']; ?></td></tr>
         <tr><th>Luas</th><td><?php echo $data['luas']; ?></td></tr>
         <tr><th>Sertifikasi</th><td><?php echo $data['sertifikasi']; ?></td></tr>
-        <tr><th>Harga</th><td><?php echo number_format($data['harga'], 0, ',', '.'); ?></td></tr>
+        <tr><th>Harga</th><td>Rp. <?php echo number_format($data['harga'], 0, ',', '.'); ?></td></tr>
         <tr><th>Kurun Sewa</th><td><?php echo $data['kurun_sewa']; ?></td></tr>
       </table>
 

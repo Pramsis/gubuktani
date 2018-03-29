@@ -11,7 +11,7 @@
 
     $currentAdmin = $admin->getAdmin();
 
-    $limit = 5;
+    $limit = 4;
     $sql = "SELECT * FROM tb_user ORDER BY create_at DESC";
     $query = $db->prepare($sql);
     $query->execute();
@@ -74,6 +74,7 @@
       <table id="myTable">
         <tr>
           <th class="no-column">#</th>
+          <th>Foto Profil</th>
           <th>Nama Lengkap</th>
           <th>Email</th>
           <th>Alamat</th>
@@ -86,6 +87,7 @@
         foreach ($data as $value) : ?>
         <tr>
           <td><?php echo $no++; ?></td>
+          <td style="width: 10%;"><img src="../ui/images/<?php echo $value['foto']; ?>" width="50%" style="border-radius: 100%;"></td>
           <td><?php echo $value['nama_depan'] . "&nbsp;" . $value['nama_belakang']; ?></td>
           <td><?php echo $value['email']; ?></td>
           <td><?php echo $value['alamat']; ?></td>
@@ -101,7 +103,7 @@
 
         <?php }else{ ?> -->
         <tr>
-          <td colspan="7">
+          <td colspan="8">
             <div class="pagination">
               <?php for($page=1; $page <= $total_pages ; $page++):?>
                   <a href="<?php echo "?page=$page" ?>"><?php echo $page; ?></a>

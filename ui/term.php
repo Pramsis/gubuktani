@@ -34,18 +34,23 @@
   Dalam hal ini Gubuktani.co.id melindungi privasi user dan tidak akan memberikan data user Gubuktani.co.id kepada pihak ketiga tanpa melalui persetujuan user tersebut.
   Data Pengunjung Situs Gubuktani.co.id</p>
 
+  <p>Dalam mengisi data user anda harus mengisi data sebenar benarnya tanpa adanya rekayasa termasuk <strong>Foto Profil</strong> harus asli wajah anda karena akan berhubungan langsung pada user lain yang menyewa lahan anda dan untuk mencegah adanya penipuan.
+  </p>
+
+  <p>Untuk mengisi nomor <strong>Telepon</strong> pastikan anda memakai nomor telepon aktif dan bisa dihubungi</p>
+
   <p><strong>Mengisi Form Iklan</strong></p>
 
-  <p>Dalam mengisi form iklan , user harus memberikan data yang konkrit dan jujur . Segala bentuk iklan yang tidak konkrit maka iklan tersebut tidak di verifikasi oleh admin .</p>
+  <p>Dalam mengisi form iklan , user harus memberikan data yang konkrit dan jujur . Segala bentuk iklan yang tidak konkrit maka iklan tersebut tidak di verifikasi atau mungkin dihapus oleh admin</p>
 
 
   <p><strong>Keterangan Lanjutan</strong></p>
 
-  <p>Segala bentuk penipuan apapun akan dibanned dari website ini</p>
+  <p>Segala bentuk penipuan apapun akan dibanned dari website ini. dan jika ada kasus penipuan yang menyangkut website ini akan segera dilaporkan ke <strong>Pihak Yang Berwenang</strong> . Mari kita manfaatkan website ini dengan bijak</p>
 
   <p><strong>Hubungi Kami</strong></p>
 
-  <p>Apabila terdapat pertanyaan terkait kebijakan privasi ini, silakan menghubungi kami melalui informasi kontak di bawah ini.</p>
+  <p>Apabila terdapat pertanyaan terkait kebijakan privasi ini atau masukan, silakan menghubungi kami melalui informasi kontak di bawah ini.</p>
 
   <p>Gubuktani.co.id</p>
 

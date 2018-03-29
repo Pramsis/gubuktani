@@ -46,7 +46,7 @@
             <?php endif; ?>
             <form class="login-form" method="post">
               <input type="text" name="username" placeholder="Username" required/>
-              <input type="password" name="password" placeholder="password" required/>
+              <input type="password" name="password" placeholder="Password" required/>
               <button type="submit" name="kirim">LOGIN</button>
               <p class="message">Example Sidenav Admin Panel @ 2018</p>
             </form>

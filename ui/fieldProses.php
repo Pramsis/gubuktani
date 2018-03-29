@@ -117,7 +117,8 @@ elseif(isset($_POST['kirim-edit']))
         $stmt =$db->prepare($sql);
         $stmt->execute([':id_lahan'=>$field_id]);
 
-        header("location: akun.php");
+        echo "<script>alert('Iklan Berhasil Dihapus');window.location='akun.php';</script>";
+
 
 }elseif(isset($_POST["ganti-foto"])){
 

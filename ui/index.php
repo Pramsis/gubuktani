@@ -30,7 +30,7 @@
     <h2><i class="fa fa-tree"></i>&nbsp;Lahan Sewa Terbaru</h2>
     <?php
         
-        if (isset($_GET['cari'])){
+        if(isset($_GET['cari'])){
             $cari = $_GET['cari'];
             $sql = "SELECT * FROM tb_lahan INNER JOIN tb_kategori ON tb_lahan.id_kategori=tb_kategori.id_kategori WHERE status = 'Terverifikasi' AND  judul LIKE '%".$cari."%'";
             $query = $db->prepare($sql);
@@ -81,7 +81,7 @@
           <p><strong><?php echo $field['judul']?></strong></p>
           <p><i class="fa fa-tags"></i>&nbsp;<?php echo $field['kategori']; ?></p>
           <p><i class="fa fa-arrows"></i>&nbsp;Luas <?php echo $field['luas']; ?> M<sup>2</sup></p>
-          <p><i class="fa fa-money"></i>&nbsp;Rp. <?php echo number_format($field['harga'], 0, ',', '.'); ?> / <?php echo $field['kurun_sewa']; ?></p>
+          <p><strong>Rp. <?php echo number_format($field['harga'], 0, ',', '.'); ?> / <?php echo $field['kurun_sewa']; ?></strong></p>
         </div>
         <a href="fieldDetail.php?id_lahan=<?php echo $field['id_lahan'] ?>" class="btn info" style="width: 100%;">Lihat Selengkapnya</a>
       </div>
@@ -100,8 +100,9 @@
     ?>
     </div>
     </center>
-    <hr>
-    <div class="kategori">
+  </div>
+</div>
+<div class="kategori">
     <h2><i class="fa fa-tags"></i>&nbsp; Kategori</h2>
     <?php
       
@@ -113,10 +114,10 @@
       foreach($categorys as $category): 
     
     ?>
-    <a href="fieldCat.php?id_kategori=<?php echo $category['id_kategori']?>" class="default" style="padding: 20px;"><?php echo $category['kategori'] ?></a>
+    <a href="fieldCat.php?id_kategori=<?php echo $category['id_kategori']?>"><i class="fa fa-tag"></i>&nbsp;<?php echo $category['kategori'] ?></a>
     <?php endforeach; ?>
-  </div> 
-    <hr>
+  </div>
+<div class="content"> 
     <div class="Whyrow">
       <h2><i class="fa fa-thumbs-o-up"></i>&nbsp; Alasan Memilih Gubuktani.co.id</h2>
       <div class="Whycolumn">
@@ -124,7 +125,7 @@
           <img src="img/1.jpg" style="width:100%; border-radius: 100%;">
           <div class="WhyText">
             <h2>Aman Dan Terpercaya</h2>
-            <p>Gubuktani.co.id menghargai dan menjamin keamanan dalam memilih lahan.</p>
+            <p>Gubuktani.co.id menghargai dan menjamin privasi data pribadi anda dalam memilih lahan serta memberikan rekomendasi yang terpercaya untuk anda.</p>
           </div>
         </div>
       </div>

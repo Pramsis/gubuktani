@@ -35,7 +35,7 @@
   <h1>Sekarang Menyewa Lahan Pertanian Semakin Mudah Dan Cepat</h1>
   <h3>Ayo Daftarkan Sekarang Dan Iklankan Lahan Anda Secara Online</h3>
 </div>
-<div class="content">
+<div class="content contentField">
     <div class="view-data">
     <h2><i class="fa fa-tags"></i>&nbsp;Menampilkan Lahan Dari Kategori <?php echo $catData['kategori']; ?></h2>
     <?php
@@ -88,7 +88,7 @@
           <p><strong><?php echo $field['judul']?></strong></p>
           <p><i class="fa fa-tags"></i>&nbsp;<?php echo $field['kategori']; ?></p>
           <p><i class="fa fa-arrows"></i>&nbsp;Luas <?php echo $field['luas']; ?> M<sup>2</sup></p>
-          <p><i class="fa fa-money"></i>&nbsp;Rp .<?php echo $field['harga']; ?> / <?php echo $field['kurun_sewa']; ?></p>
+          <p><strong>Rp .<?php echo $field['harga']; ?> / <?php echo $field['kurun_sewa']; ?></strong></p>
         </div>
         <a href="fieldDetail.php?id_lahan=<?php echo $field['id_lahan'] ?>" class="btn info" style="width: 100%;">Lihat Selengkapnya</a>
       </div>

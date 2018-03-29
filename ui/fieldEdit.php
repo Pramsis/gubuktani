@@ -79,7 +79,7 @@
         <p>Deskripsi</p>
         <textarea placeholder="Masukkan Deskripsi" onKeyUp='textCounter(this)' wrap='physical' rows='1' cols='60' oninput="this.className = ''" name="deskripsi"><?php echo $data['deskripsi'] ?></textarea>
         <p>Harga</p>
-        <input type="text" id="tanpa-rupiah" placeholder="Harga Pertahun" oninput="this.className = ''" name="harga" value="<?php echo $data['harga'] ?>">
+        <input type="text" id="tanpa-rupiah" placeholder="Harga Pertahun" oninput="this.className = ''" name="harga" value="<?php echo number_format($data['harga'], 0, ',', '.'); ?>">
         <p>Kurun Sewa</p>
           <select name="kurun_sewa" required/>
             <option><?php echo $data['kurun_sewa'] ?></option>
