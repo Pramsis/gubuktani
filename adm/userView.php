@@ -22,6 +22,11 @@
       header("Location: AdminData.php");
     }
 
+      $fieldSql = "SELECT * FROM tb_lahan INNER JOIN tb_user ON tb_lahan.id_user=tb_user.id_user";
+      $fieldQuery = $db->prepare($fieldSql);
+      $fieldQuery->execute();
+      $fields = $fieldQuery->fetchAll();
+
  ?>
 
 <!DOCTYPE html>
@@ -40,51 +45,72 @@
 
 <div class="wrapper">
   <div class="content">
+    
     <h2><i class="fa fa-user fa-fw" aria-hidden="true"></i>Data  <?php echo $data['nama_depan'] . "&nbsp;" . $data['nama_belakang']; ?></h2>
-      <table class="table-data">
-        <tr><th class="data-column">Foto Profil</th><td><img src="../ui/images/<?php echo $data['foto'] ?>" width="150px" height="150px" style="border-radius: 100%;"></td></tr>
-        <tr><th class="data-column">Nama Lengkap</th><td><?php echo $data['nama_depan'] . "&nbsp;" . $data['nama_belakang']; ?></td></tr>
-        <tr><th>Email</th><td><?php echo $data['email']; ?></td></tr>
-        <tr><th>Alamat</th><td><?php echo $data['alamat']; ?></td></tr>
-        <tr><th>Telepon</th><td><?php echo $data['telepon']; ?></td></tr>
-        <tr><th>Profesi</th><td><?php echo $data['profesi']; ?></td></tr>
-        <tr><th>Waktu Dibuat</th><td><?php echo $data['create_at']; ?></td></tr>
-        <tr><th>Waktu Diperbarui</th><td><?php echo $data['update_at']; ?></td></tr>
-      </table>
+    <div class="tab">
+      <div class="userImage">
+        <img src="../ui/images/<?php echo $data['foto'] ?>" alt="Avatar" style="">
+      </div>
+      <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Sekilas Profil</button>
+      <button class="tablinks" onclick="openCity(event, 'Paris')">Daftar Iklan</button>
+    </div>
 
-      <table class="table-data-kanan">
-        <tr><th colspan="3">Data Lahan <?php echo $data['nama_depan'] ?></th></tr>
-        <?php 
+    <div id="London" class="tabcontent">
+      <h1>Sekilas Profil</h1>
+         <table class="tbakun" border="0">
+          <tr>
+            <th class="tbakunhead">Nama Lengkap</th><th><?php echo $data['nama_depan'] . '&nbsp;' . $data['nama_belakang'] ?></th>
+          </tr>
+          <tr>
+            <th>Email </th><th><?php echo $data['email'] ?></th>
+          </tr>
+          <tr>
+            <th>Alamat </th><th><?php echo $data['alamat'] ?></th>
+          </tr>
+          <tr>
+            <th>Telepon </th><th><?php echo $data['telepon'] ?></th>
+          </tr>
+          <tr>
+            <th>Profesi </th><th><?php echo $data['profesi'] ?></th>
+          </tr>
+          <tr>
+            <th colspan="2"><a href="userData.php"><i class="
+              fa fa-arrow-left"></i>&nbsp;Kembali</a></th>
+          </tr>
+        </table>
+    </div>
 
-            $fieldSql = "SELECT * FROM tb_lahan INNER JOIN tb_user ON tb_lahan.id_user=tb_user.id_user";
-            $fieldQuery = $db->prepare($fieldSql);
-            $fieldQuery->execute();
-            $fields = $fieldQuery->fetchAll();
-
-
-        ?>
-        <?php
-
-           foreach ($fields as $field) {
-
-           if($field['id_user'] == $_GET['id_user']){
-
-        ?>
-        <tr><td><?php echo $field['judul'] ?></td><td><a href="fieldView.php?id_lahan=<?php echo $field['id_lahan'] ?>" class="btn act info" title="Lihat"><i class="fa fa-eye"></i></a></td></tr>
-        <?php 
-            }
-          }
+    <div id="Paris" class="tabcontent">
+      <h1>Daftar Iklan</h1>
+         <table class="tbakun" border="0">
+          <tr>
+            <th>Judul</th>
+            <th>Alamat</th>
+            <th class="no-column">Aksi</th>
+          </tr>
+           <?php
+              foreach ($fields as $field) :
+                if($field['id_user'] == $_GET['id_user']):
+           ?>
+          <tr>
+            <td><?php echo $field['judul'] ?></td>
+            <td><?php echo $field['alamat_lahan'] ?></td>
+            <td><a href="fieldView.php?id_lahan=<?php echo $field['id_lahan'] ?>"><i class="fa fa-eye"></i></a></td>
+          </tr>
+          <?php 
+                endif;
+              endforeach;
           ?>
           <tr>
-            <td colspan=2>
-              <a href="userData.php" class="btn act info" title="Kembali"><i class="fa fa-arrow-left"></i>Kembali</a>
-            </td>
+            <th colspan="3"><a href="userData.php"><i class="
+              fa fa-arrow-left"></i>&nbsp;Kembali</a></th>
           </tr>
-      </table>
-
+        </table>
+    </div>
 
 <?php include "template/footer.php"; ?>
 </div>
 <script type="text/javascript" src="js/accordion.js"></script>
+<script type="text/javascript" src="js/tab.js"></script>
 </body>
 </html>

@@ -88,7 +88,7 @@
           <p><strong><?php echo $field['judul']?></strong></p>
           <p><i class="fa fa-tags"></i>&nbsp;<?php echo $field['kategori']; ?></p>
           <p><i class="fa fa-arrows"></i>&nbsp;Luas <?php echo $field['luas']; ?> M<sup>2</sup></p>
-          <p><strong>Rp .<?php echo $field['harga']; ?> / <?php echo $field['kurun_sewa']; ?></strong></p>
+          <p><strong>Rp. <?php echo number_format($field['harga'], 0, ',', '.'); ?> / <?php echo $field['kurun_sewa']; ?></strong></p>
         </div>
         <a href="fieldDetail.php?id_lahan=<?php echo $field['id_lahan'] ?>" class="btn info" style="width: 100%;">Lihat Selengkapnya</a>
       </div>
