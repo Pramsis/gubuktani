@@ -106,7 +106,7 @@
     <a>
 
     <a href="feedbackData.php">
-      <div class="landing flatBlack" >
+      <div class="landing sunflower" >
         <h2>Kiriman Umpan Balik <?php echo $feedData; ?> Pesan</h2>
       </div> 
     </a>

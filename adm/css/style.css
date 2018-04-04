@@ -1,8 +1,9 @@
 html,body {
     margin: 0;
     font-family: calibri;
-    color: #777;
+    color: #fff;
     height: 100%;
+    background: #444;
 }
 
 a{
@@ -154,7 +155,7 @@ div.content {
 /* Modal Content */
 .modal-content {
     position: relative;
-    background-color: #fefefe;
+    background-color: #333;
     margin: auto;
     padding: 0;
     border: 1px solid #888;
@@ -194,7 +195,7 @@ div.content {
 
 .modal-header {
     padding: 2px 16px;
-    background-color: #5cb85c;
+    background-color: #2ecc71;
     color: white;
 }
 
@@ -202,7 +203,7 @@ div.content {
 
 .modal-footer {
     padding: 2px 16px;
-    background-color: #5cb85c;
+    background-color: #2ecc71;
     color: white;
 }
 
@@ -288,6 +289,7 @@ div.content {
     text-align: center;
     background: #555;
     height: 200px;
+    background: #555;
 }
 
 .adsImage img{
@@ -357,12 +359,12 @@ div.footer {
 
 div.footer a{
     text-decoration: none;
-    color: #333;
+    color: #f2f2f2;
     font-weight: bold;
 }
 
 div.footer a:hover{
-    color: #4CAF50;
+    color: #ccc;
     transition: 0.4s;
 }
 
@@ -513,16 +515,19 @@ div.footer a:hover{
 
 .form-tambah input[type=password],.form-tambah input[type=number],.form-tambah input[type=text],.form-tambah input[type=email],select,option {
     width: 100%;
-    padding: 10px;
+    padding: 20px;
     margin-bottom: 8px;
     box-sizing: border-box;
+    background: #333;
+    border:none;
+    color: #fff;
 }
 .form-tambah input[type=submit]{
-    background-color: #4CAF50; /* Green */
+    background-color: #2ecc71; /* Green */
     border: none;
     width: 100%;
     color: white;
-    padding: 10px;
+    padding: 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;

@@ -50,6 +50,7 @@
     <div class="tab">
       <div class="userImage">
         <img src="../ui/images/<?php echo $data['foto'] ?>" alt="Avatar" style="">
+        <h3><?php echo $data['nama_depan'] . "&nbsp;" . $data['nama_belakang']; ?></h3>
       </div>
       <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Sekilas Profil</button>
       <button class="tablinks" onclick="openCity(event, 'Paris')">Daftar Iklan</button>

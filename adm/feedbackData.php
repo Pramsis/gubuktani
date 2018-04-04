@@ -50,7 +50,7 @@
 <?php include "template/header.php"; ?>
 <div class="wrapper">
   <div class="content">
-    <h2><i class="fa fa-tag fa-fw" aria-hidden="true"></i>Data - Kategori</h2>
+    <h2><i class="fa fa-send fa-fw" aria-hidden="true"></i>Data - Umpan Balik</h2>
     <a href="fpdf/FeedbackPDF.php" target="_blank"><button class="btn info"><i class="fa fa-file-pdf-o"></i> Cetak Ke PDF</button></a>
     <div style="overflow-x:auto;">
       <table id="myTable">
