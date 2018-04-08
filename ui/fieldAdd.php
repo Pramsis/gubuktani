@@ -41,7 +41,7 @@
                 $query = $db->prepare($sql);
                 $query->execute();
                 while(list($idKategori, $Kategori) = $query->fetch()){
-                  echo "<option value='$idKategori'";
+                  echo "<option value='$idKatego ri'";
                   echo ">$Kategori</option>";
                 }
                 ?>

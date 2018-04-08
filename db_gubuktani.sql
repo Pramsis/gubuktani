@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 22 Mar 2018 pada 15.13
+-- Generation Time: 08 Apr 2018 pada 19.11
 -- Versi Server: 10.1.19-MariaDB
 -- PHP Version: 5.6.28
 
@@ -67,7 +67,8 @@ CREATE TABLE `tb_feedback` (
 INSERT INTO `tb_feedback` (`id_feedback`, `nama`, `email`, `pesan`, `create_at`, `update_at`) VALUES
 (9, 'Dimas Pramudya Sumarsis', 'dimasrajawali76@gmail.com', 'Terima Kasih admin gubuktani.co.id telah memberikan kemudahan dalam mengiklankan , saran lebih ditingkatkan lagi fitur dan tampilannya', '2018-03-22 20:11:58', NULL),
 (10, 'Imron rosyadi', 'rosyadi@gmail.com', 'Website ini bagus jarang ada di Indonesia , kalo ada ini yang paling perfect :)', '2018-03-22 20:14:01', NULL),
-(11, 'Hendra Fachrur Rojjy', 'hendra123@gmail.com', 'Membantu sekali dalam mengiklankan lahan pertanian saya yang selama ini tidak saya urus, Saran lebih ditingkatkan lagi Thx', '2018-03-22 20:17:07', NULL);
+(11, 'Hendra Fachrur Rojjy', 'hendra123@gmail.com', 'Membantu sekali dalam mengiklankan lahan pertanian saya yang selama ini tidak saya urus, Saran lebih ditingkatkan lagi Thx', '2018-03-22 20:17:07', NULL),
+(12, 'Muhammad Ridwan', 'ridwan@gmail.com', 'Website nya bagus lanjutkan', '2018-03-27 21:14:03', NULL);
 
 -- --------------------------------------------------------
 
@@ -90,8 +91,6 @@ INSERT INTO `tb_kategori` (`id_kategori`, `kategori`, `create_at`, `update_at`) 
 (12, 'Pertanian', '2018-01-31 21:13:46', NULL),
 (13, 'Perkebunan', '2018-01-31 21:13:54', NULL),
 (14, 'Hutan Produksi', '2018-01-31 21:14:07', NULL),
-(15, 'Toga', '2018-01-31 21:14:11', NULL),
-(16, 'Hidroponik', '2018-01-31 21:15:37', NULL),
 (17, 'Tanah Kosong', '2018-01-31 21:15:57', '2018-02-16 13:55:48');
 
 -- --------------------------------------------------------
@@ -127,12 +126,15 @@ CREATE TABLE `tb_lahan` (
 --
 
 INSERT INTO `tb_lahan` (`id_lahan`, `id_user`, `id_kategori`, `judul`, `alamat_lahan`, `luas`, `sertifikasi`, `deskripsi`, `harga`, `kurun_sewa`, `status`, `kondisi`, `fasilitas_irigasi`, `fasilitas_tanah`, `fasilitas_jalan`, `fasilitas_pemandangan`, `foto_lahan`, `fieldCreate_at`, `fieldUpdate_at`) VALUES
-(24, 41, 14, 'Disewakan cepat sawah , gak rewel gak ribet SHM', 'Jl. Nasional Solo Jogja , Kab Magelang', '3000', 'SHM - Sertifikat Hak Milik', 'Sip', 20000000, 'Tahunan', 'Terverifikasi', 'Tersedia', 'Menggunakan Pompa Air', 'Liat', 'Melewati Jalan Setapak Sawah', 'Tidak Ada', '22022018074226sawah6.jpg', '2018-02-15 22:52:04', '2018-03-20 17:17:36'),
-(25, 44, 12, 'Sewakan Sawah Murah Dikaki Bukit Simo Cocok Untuk Wisata', 'Jl Wisata Bukit Simo Petak 6 Wonogiri', '100', 'HGB - Hak Guna Bangunan', 'tanpa perantara', 350000, 'Tahunan', 'Terverifikasi', 'Tersewa', 'Menggunakan Pompa Air', 'Humus', 'Melewati Jalan Setapak Sawah', 'Terasering', '22022018090802sawah3.jpg', '2018-02-22 09:08:02', '2018-03-21 22:46:58'),
+(24, 41, 12, 'Disewakan cepat sawah , gak rewel gak ribet SHM', 'Jl. Nasional Solo Jogja , Kab Magelang', '3000', 'SHM - Sertifikat Hak Milik', 'Sip', 20000000, 'Tahunan', 'Terverifikasi', 'Tersedia', 'Menggunakan Pompa Air', 'Liat', 'Melewati Jalan Setapak Sawah', 'Tidak Ada', '22022018074226sawah6.jpg', '2018-02-15 22:52:04', '2018-03-28 11:19:54'),
+(25, 44, 12, 'Sewakan Sawah Murah Dikaki Bukit Simo', 'Jl Wisata Bukit Simo Petak 6 Wonogiri Hawa Adem Dekat Kawasan Wisata', '100', 'HGB - Hak Guna Bangunan', 'Bismillah\r\nDisewakan sawah milik saya sendiri dikaki perbukitan simo\r\n- hawa adem\r\n- dekat masjid, pasar induk dan pemukiman pedesaan perbukitan simo setempat\r\n- akses mudah\r\n- irigasi lancar\r\n- lebar sawah lumayan cukup panen 1 ton lebih\r\n- berada dikawasan wisata perbukitan simo\r\nminat hubungi saya', 10000000, 'Tahunan', 'Terverifikasi', 'Tersewa', 'Menggunakan Pompa Air', 'Humus', 'Melewati Jalan Setapak Sawah', 'Terasering', '22022018090802sawah3.jpg', '2018-02-22 09:08:02', '2018-03-27 21:36:03'),
 (26, 44, 12, 'Disewakan Sawah Dengan Cepat Daerah Kedung Baruk', 'Jl. Lintas kedung baruk Desa Wonopinus Klaten', '1000', 'HGB - Hak Guna Bangunan', 'Disewakan Tanah Dekat Desa Secepatnya Dekat Gunung Merapi Cocok Untuk Wisata\r\n\r\nTertarik ? hubungi aja Matur Suwon', 2000000, 'Tahunan', 'Terverifikasi', 'Tersewa', 'Langsung Dari Parit', 'Liat', 'Pinggir Jalan Raya', 'Latar Belakang Gunung', '21032018230602sawah1.jpg', '2018-02-22 09:10:19', '2018-03-21 23:06:02'),
 (27, 45, 13, 'Butuh Kebun ? Disewakan Segera Kebun Jeruk Mojoagung', 'Desa SumberIjo Kecamatan Wates Kota Mojoagung', '2000', 'Lainnya (PPJB,Girik,Adat,dll)', 'Disewakan Gunung Cocok Untuk Wisata', 4000000, 'Tahunan', 'Terverifikasi', 'Tersedia', 'Melewati Saluran Kecil', 'Alluvial', 'Melewati Jalan Setapak Sawah', 'Latar Belakang Gunung', '22022018175920kebun4.jpg', '2018-02-22 17:59:20', '2018-03-22 20:37:43'),
-(28, 48, 12, 'Sewakan Sawah Murah Desa Sememi Jaya Panen Ok', 'Jl. Lambe Roni Desa Sememi', '250', 'SHM - Sertifikat Hak Milik', 'Disewakan cepat sawah milik sendiri\r\n-cocok buat menanam padi dan palawija panen 4 kali setahun\r\n-cuaca mendukung\r\n-suasana sejuk dekat telaga\r\nminat hubungi saya ok :)', 3000000, 'Tahunan', 'Terverifikasi', 'Tersedia', 'Melewati Saluran Kecil', 'Humus', 'Melewati Jalan Setapak Sawah', 'Tidak Ada', '21032018232405sawah4.jpg', '2018-03-21 23:24:05', '2018-03-21 23:24:59'),
-(29, 47, 13, 'Disewakan perkebunan pribadi lahan minimalis profit besar', 'Jl Wonorejo Timur Surabaya', '150', 'SHM - Sertifikat Hak Milik', 'Disewakan perkebunan pribadi milik saya sendiri\r\n- tanah minimalis gak ribet\r\n- dekat jalan besar\r\n- irigasi lancar dari pompa\r\n- disewakan karena saya sibuk mengajar di sekolah dari pada enggak keurus\r\nminat telepon saya nomer ada di bawah', 3500000, 'Tahunan', 'Terverifikasi', 'Tersewa', 'Menggunakan Pompa Air', 'Liat', 'Pinggir Jalan Raya', 'Tidak Ada', '21032018233112kebun5.jpg', '2018-03-21 23:31:12', '2018-03-21 23:32:43');
+(28, 48, 12, 'Sewakan Sawah Murah Desa Sememi Jaya Panen Ok', 'Jl. Lambe Roni Desa Sememi', '750', 'SHM - Sertifikat Hak Milik', 'Disewakan cepat sawah milik sendiri\r\n-cocok buat menanam padi dan palawija panen 4 kali setahun\r\n-cuaca mendukung\r\n-suasana sejuk dekat telaga\r\nminat hubungi saya ok :)', 3000000, 'Tahunan', 'Terverifikasi', 'Tersedia', 'Melewati Saluran Kecil', 'Humus', 'Melewati Jalan Setapak Sawah', 'Tidak Ada', '21032018232405sawah4.jpg', '2018-03-21 23:24:05', '2018-04-05 00:10:30'),
+(29, 47, 13, 'Disewakan perkebunan pribadi lahan minimalis profit besar', 'Jl Wonorejo Timur Surabaya', '500', 'SHM - Sertifikat Hak Milik', 'Disewakan perkebunan pribadi milik saya sendiri\r\n- tanah minimalis gak ribet\r\n- dekat jalan besar\r\n- irigasi lancar dari pompa\r\n- disewakan karena saya sibuk mengajar di sekolah dari pada enggak keurus\r\nminat telepon saya nomer ada di bawah', 3500000, 'Tahunan', 'Terverifikasi', 'Tersewa', 'Menggunakan Pompa Air', 'Liat', 'Pinggir Jalan Raya', 'Tidak Ada', '21032018233112kebun5.jpg', '2018-03-21 23:31:12', '2018-03-27 22:33:17'),
+(30, 49, 14, 'Disewakan hutan produksi daerah sumatra minat hubungi andi', 'Desa Bukittinggi Kecamatan Dhaeng', '1000', 'SHM - Sertifikat Hak Milik', 'Disewakan hutan produksi kayu pinus\r\n- lokasi strategis\r\n- akses memadai\r\n- cocok untuk usaha\r\nminat hubungi andi dibawah ini', 20000000, 'Tahunan', 'Terverifikasi', 'Tersewa', 'Melewati Saluran Kecil', 'Alluvial', 'Pinggir Jalan Raya', 'Tidak Ada', '27032018183538hutan.jpg', '2018-03-27 18:35:38', '2018-03-28 18:14:30'),
+(31, 49, 13, 'Disewakan Perkebunan Sawit Dari PT Bagusindo Jaya Sentosa', 'Desa Simo Hilir Kecamatan Waton Kalimantan Timur', '1200', 'SHM - Sertifikat Hak Milik', 'Disewakan perkebunan sawit milik PT Bagusindo Jaya Sentosa\r\n- Cocok untuk pengusaha sawit\r\n- profit setiap bulan\r\nKami menyewakan karena kami tidak memiliki cukup modal untuk mengelolanya\r\njika anda berminat hubungi Staff humas kami Pak Andi', 120000000, 'Tahunan', 'Terverifikasi', 'Tersedia', 'Langsung Dari Parit', 'Gambut', 'Pinggir Jalan Raya', 'Tidak Ada', '27032018184414kebun3.jpg', '2018-03-27 18:44:14', '2018-03-27 18:47:14'),
+(32, 50, 13, 'Disewakan Kebun Sawit milik pribadi daerah kalimantan', 'Jl Raya Desa Dayak Besar Kecamatan Singkawang Kabupaten Singkawang', '10000', 'SHM - Sertifikat Hak Milik', 'Disewakan Kebun sawit milik pribadi , harga menarik , panen 3 bulan sekali , akses jalan lebar , tak jauh dari pemukiman \r\nminat hubungi ridwan mojokerto', 30000000, 'Tahunan', 'Terverifikasi', 'Tersewa', 'Melewati Saluran Kecil', 'Gambut', 'Pinggir Jalan Raya', 'Tidak Ada', '27032018205525kebun2.jpg', '2018-03-27 20:55:25', '2018-03-28 18:10:11');
 
 -- --------------------------------------------------------
 
@@ -164,7 +166,9 @@ INSERT INTO `tb_user` (`id_user`, `nama_depan`, `nama_belakang`, `email`, `passw
 (45, 'Hendra', 'Fachrur Rojjy', 'hendra123@gmail.com', '$2y$10$M.Ypd9cFLpurrpiGIG.BD.ABwneVRL.X1QtjyWMbhWIQ/kVIibWXi', 'Simorejo', '081675323445', 'Swasta', '23022018214241123.jpg', '2018-02-22 16:56:53', '2018-03-22 20:28:40'),
 (46, 'Hartono', '', 'htono@gmail.com', '$2y$10$3m3.2tu50.yt0Hh74l4UxuY0Mga0b3apJGjWp26rihfaSDM/.QwWi', 'Jl Kedungklinter Desa Kedung Doro Kec Tegalsari', '085623222134', 'Swasta', '210320182227532.jpg', '2018-03-21 22:27:53', NULL),
 (47, 'Suwondo', '', 'suwondo@gmail.com', '$2y$10$Y0Fz6Bv.R6dMUiH8x/Lrg.qq2OWmnftB1VirdS8LQeaPOlbvXwM4O', 'Jl Wonorejo Desa Tegalsari', '085433221876', 'Pegawai Negeri', '21032018222908125x125.jpg', '2018-03-21 22:29:08', NULL),
-(48, 'Andri', 'Nur Hidayat', 'andri@gmail.com', '$2y$10$eamkIT8h766FDZZ.oh8pa.qGy/n5MjiBZTB5Sdut0/zRxmfX/GciG', 'Jl Uka Desa Benowo', '081232527624', 'Petani', '210320182232384.jpg', '2018-03-21 22:32:38', NULL);
+(48, 'Andri', 'Nur Hidayat', 'andri@gmail.com', '$2y$10$eamkIT8h766FDZZ.oh8pa.qGy/n5MjiBZTB5Sdut0/zRxmfX/GciG', 'Jl Uka Desa Benowo', '081232527624', 'Petani', '210320182232384.jpg', '2018-03-21 22:32:38', NULL),
+(49, 'Andi', 'Fatturochman', 'andileonard@gmail.com', '$2y$10$gWeWXd2JIPIJ0C5JgGiK4eKeQP3k.7Ub7seQq9nPcrP763JeNL2Xu', 'Jl Banyu Urip Kidul Gg V Surabaya', '085765434526', 'Swasta', '27032018181518elesmana.jpg', '2018-03-27 18:15:18', '2018-03-27 18:46:43'),
+(50, 'Muhammad', 'Ridwan', 'ridwan@gmail.com', '$2y$10$ygzAJmZ1ZUmi/cvYC80tj.3DC.7P0tTEetZyH0THXhPGnMLSWvDOC', 'Jl Tambaksegaran Desa Jagir Mojokerto', '087612321331', 'Pegawai Negeri', '27032018205148IMG_20171217_190851_382.jpg', '2018-03-27 20:51:48', NULL);
 
 --
 -- Indexes for dumped tables
@@ -208,12 +212,12 @@ ALTER TABLE `tb_user`
 -- AUTO_INCREMENT for table `tb_admin`
 --
 ALTER TABLE `tb_admin`
-  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 --
 -- AUTO_INCREMENT for table `tb_feedback`
 --
 ALTER TABLE `tb_feedback`
-  MODIFY `id_feedback` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id_feedback` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 --
 -- AUTO_INCREMENT for table `tb_kategori`
 --
@@ -223,12 +227,12 @@ ALTER TABLE `tb_kategori`
 -- AUTO_INCREMENT for table `tb_lahan`
 --
 ALTER TABLE `tb_lahan`
-  MODIFY `id_lahan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id_lahan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 --
 -- AUTO_INCREMENT for table `tb_user`
 --
 ALTER TABLE `tb_user`
-  MODIFY `id_user` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
+  MODIFY `id_user` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

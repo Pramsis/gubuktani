@@ -38,7 +38,7 @@
     <body class="body-login">
         <div class="login-page">
           <div class="form">
-            <h1>Login</h1>
+            <h1 style="color: #333;">Login</h1>
             <?php if (isset($error)): ?>
             <div class="alert">
             <?php echo $error ?>
